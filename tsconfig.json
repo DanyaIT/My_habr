@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      "module": "esnext",
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      
+      //Приведенный выше пример предполагает, что версия >= 2.7 или новее TypeScript используется с новым esModuleInterop и 
+      //allowSyntheticDefaultImports параметры компилятора в вашем файле tsconfig.json
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports":true
+    },
+    
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    }
+  }
