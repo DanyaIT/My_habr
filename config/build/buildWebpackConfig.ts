@@ -29,6 +29,6 @@ export function buildWebpackConfig(options: BuildOptions):webpack.Configuration{
         
         devServer: isDev? buildDevServer(options) : undefined,
 
-        resolve: buildResolves(),
+        resolve: buildResolves(options),
       };
 }
