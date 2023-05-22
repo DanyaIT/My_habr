@@ -7,11 +7,8 @@ import { AppRouter } from './providers/router'
 import { SideBar } from 'widgets/SideBar'
 import { Suspense } from 'react'
 
-
-
 const App = () => {
-
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (<div className={classNames('app', {}, [theme, 'cl1'])}>
     <Suspense fallback={'Загрузка'}>
