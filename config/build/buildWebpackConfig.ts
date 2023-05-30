@@ -2,7 +2,7 @@ import { buildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoader';
 import { buildPlugins } from './buildPlugins';
 import { buildResolves } from './buildResolves';
-import { BuildOptions } from './types';
+import { BuildOptions } from './types/config';
 import webpack from 'webpack'
 
 export function buildWebpackConfig (options: BuildOptions): webpack.Configuration {

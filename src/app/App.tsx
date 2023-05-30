@@ -6,16 +6,15 @@ import { Navbar } from 'widgets/Navbar'
 import { AppRouter } from './providers/router'
 import { SideBar } from 'widgets/SideBar'
 import { Suspense, useEffect } from 'react'
-import { PageLoader } from 'widgets/PageLoader'
+
 
 
 const App = () => {
   const { theme } = useTheme()
 
-
-
-  return (<div className={classNames('app', {}, [theme, 'cl1'])}>
-    <Suspense fallback={<PageLoader/>}>
+  return (
+  <div className={classNames('app', {}, [theme])}>
+    <Suspense fallback=''>
       <Navbar />
       <div className='content-page'>
         <SideBar />
