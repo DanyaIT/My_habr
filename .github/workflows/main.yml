@@ -9,14 +9,12 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
       name: Starting Node.js ${{matrix.node-version}}
       with:
         node-version: ${{matrix.node-version}}
-    - name: preInstall modules
-      run: npm install --legacy-peer-deps
     - name: install modules
       run: npm install
     - name: buld production project
