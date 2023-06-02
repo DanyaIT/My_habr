@@ -9,14 +9,14 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
     steps:
     - uses: actions/checkout@v2
       name: Starting Node.js ${{matrix.node-version}}
       with:
         node-version: ${{matrix.node-version}}
     - name: install modules
-      run: npm install
+      run: npm init
     - name: buld production project
       run: npm run build:prod  
     - name: linting typescript
