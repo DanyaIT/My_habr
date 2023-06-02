@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-2022
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [17.x]
     steps:
     - name: Starting Node.js ${{matrix.node-version}}
     - uses: actions/checkout@v2
