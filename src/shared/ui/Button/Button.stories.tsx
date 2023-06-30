@@ -1,5 +1,5 @@
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Button, ThemeButton } from "./Button";
+import { Button, SizeButton, ThemeButton } from "./Button";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 
@@ -26,10 +26,31 @@ Clear.args = {
     theme: ThemeButton.CLEAR
 }
 
-export const OutlineLight = Template.bind({})
-OutlineLight.args = {
+export const Outline = Template.bind({})
+Outline.args = {
     children: "Text",
     theme: ThemeButton.OUTLINE
+}
+
+export const OutlineSizeM = Template.bind({})
+OutlineSizeM.args = {
+    children: "Text",
+    theme: ThemeButton.OUTLINE,
+    size: SizeButton.M,
+}
+
+export const OutlineSizeL = Template.bind({})
+OutlineSizeL.args = {
+    children: "Text",
+    theme: ThemeButton.OUTLINE,
+    size: SizeButton.L,
+}
+
+export const OutlineSizeXL = Template.bind({})
+OutlineSizeXL.args = {
+    children: "Text",
+    theme: ThemeButton.OUTLINE,
+    size: SizeButton.XL,
 }
 
 export const OutlineDark = Template.bind({})
@@ -38,6 +59,50 @@ OutlineDark.args = {
     theme: ThemeButton.OUTLINE
 }
 
+export const BackgroundTheme = Template.bind({})
+BackgroundTheme.args = {
+    children: "Text",
+    theme: ThemeButton.BACKGROUND
+}
+
+export const BackgroundThemeInverted = Template.bind({})
+BackgroundThemeInverted.args = {
+    children: "Text",
+    theme: ThemeButton.BACKGROUND_INVERTED
+}
+
+export const Square = Template.bind({})
+
+Square.args = {
+    children: ">",
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    square: true
+}
+
+
+export const SquareSizeM = Template.bind({})
+SquareSizeM.args = {
+    children: ">",
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    square: true,
+    size: SizeButton.M
+}
+
+export const SquareSizeL = Template.bind({})
+SquareSizeL.args = {
+    children: ">",
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    square: true,
+    size: SizeButton.L
+}
+
+export const SquareSizeXL = Template.bind({})
+SquareSizeXL.args = {
+    children: ">",
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    square: true,
+    size: SizeButton.XL
+}
 
 
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]

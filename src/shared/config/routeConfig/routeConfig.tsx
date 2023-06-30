@@ -9,25 +9,25 @@ export enum RouteApp {
   NOT_FOUND = 'not_found'
 }
 
-export const routePath: Record<RouteApp, string> = {
+export const RoutePath: Record<RouteApp, string> = {
   [RouteApp.MAIN]: '/',
   [RouteApp.ABOUT]: '/about',
   [RouteApp.NOT_FOUND]: '*',
 }
 
-export const routeConfig: Record<RouteApp, RouteProps> = {
+export const RouteConfig: Record<RouteApp, RouteProps> = {
   [RouteApp.MAIN]: {
-    path: routePath.main,
+    path: RoutePath.main,
     element: <MainPage/>
   },
 
   [RouteApp.ABOUT]: {
-    path: routePath.about,
+    path: RoutePath.about,
     element: <AboutPage/>
   },
 
   [RouteApp.NOT_FOUND]: {
-    path: routePath.not_found,
+    path: RoutePath.not_found,
     element: <NotFoundPage/>
   }
 }
