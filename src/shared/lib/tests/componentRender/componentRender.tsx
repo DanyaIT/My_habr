@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import i18nForTest from "shared/config/i18n/i18nForTest";
 
 export interface componentRenderOptions{
-  route?: string
+  route?: string;
 }
 
 export function componentRender(component: React.ReactNode, options: componentRenderOptions = {}) {
@@ -12,6 +12,7 @@ export function componentRender(component: React.ReactNode, options: componentRe
 const {
   route = '/',
 } = options
+
   return render(
     <MemoryRouter initialEntries={[route]}>
       <I18nextProvider i18n={i18nForTest}>{component}</I18nextProvider>,

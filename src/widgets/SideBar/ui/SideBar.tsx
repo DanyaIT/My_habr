@@ -14,7 +14,7 @@ interface SideBarProps {
   className?: string;
 }
 
-export const SideBar: FC<SideBarProps> = ({ className }) => {
+export const SideBar = ({ className }:SideBarProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const {t} = useTranslation();
   const onToggle = () => {
