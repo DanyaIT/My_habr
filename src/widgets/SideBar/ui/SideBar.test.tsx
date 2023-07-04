@@ -8,12 +8,12 @@ import { componentRender } from "shared/lib/tests/componentRender/componentRende
 
 describe('Sidebar', () => {
     test('Render Sidebar', () => {
-           componentRender(<BrowserRouter basename = '/'><SideBar/></BrowserRouter>)
+           componentRender(<SideBar/>)
         expect(screen.getByTestId('sidebar')).toBeInTheDocument()
     })
     
     test('Test toggle SideBar', () => {
-        componentRender(<BrowserRouter basename = '/'><SideBar/></BrowserRouter>)
+        componentRender(<SideBar/>)
         const toggleBtn = screen.getByTestId('sidebar-toggle')
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn)
