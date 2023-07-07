@@ -79,6 +79,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "@svgr/webpack": "^8.0.1",
     "concurrently": "^8.1.0",
     "deelay": "^2.0.0",
@@ -89,6 +90,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^12.3.1",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.11.1",
     "regenerator-runtime": "^0.13.11"
   },
