@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react'
-import { Button } from 'shared/ui/Button/Button'
+import { Button, ThemeButton } from 'shared/ui/Button/Button'
 
 
 
@@ -18,7 +19,7 @@ const BugButton = () => {
     }
 
   return (
-    <Button onClick={onThrow}>BugButton</Button>
+    <Button theme={ThemeButton.BACKGROUND_INVERTED} onClick={onThrow}>BugButton</Button>
   )
 }
 
