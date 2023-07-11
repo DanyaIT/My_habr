@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
+    "start:dev:server": "node ./json-server/index.js",
     "start": "webpack serve --env port=3000",
     "lint:ts": "npx eslint **/*.{tsx,ts,js}",
     "lint:ts:fix": "npx eslint **/*.{tsx,ts,js} --fix",
@@ -60,6 +61,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "json-server": "^0.17.3",
     "loki": "^0.31.2",
     "mini-css-extract-plugin": "^2.7.5",
     "reg-cli": "^0.17.7",
@@ -87,6 +89,7 @@
     "i18next": "^22.5.0",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.1",
+    "jsonwebtoken": "^9.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^12.3.1",
