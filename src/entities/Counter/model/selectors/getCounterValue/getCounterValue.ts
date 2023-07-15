@@ -1,4 +1,4 @@
-import { CounterSchema } from './../../type/CounterSchema';
+import { CounterSchema } from '../../types/CounterSchema';
 import { createSelector } from "@reduxjs/toolkit";
 import { getCounter } from "../getCounter/getCounter";
 
