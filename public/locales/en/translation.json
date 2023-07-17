@@ -10,6 +10,9 @@
     "О сайте":"About us",
     "Главная":"Main",
     "Войти": "Sign in",
+    "Выйти":"Sign out",
     "Введите имя пользователя": "Enter username",
-    "Введите пароль": "Enter password"
+    "Введите пароль": "Enter password",
+    "Форма авторизации": "Authorization form",
+    "Указано неверное имя пользователя или пароль": "Invalid username or password specified"
 }

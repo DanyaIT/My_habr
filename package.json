@@ -83,6 +83,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@svgr/webpack": "^8.0.1",
+    "axios": "^1.4.0",
     "concurrently": "^8.1.0",
     "deelay": "^2.0.0",
     "file-loader": "^6.2.0",

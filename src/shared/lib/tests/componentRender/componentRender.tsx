@@ -14,7 +14,7 @@ export function componentRender(component: React.ReactNode, options: componentRe
 
   const {
     route = '/',
-    initialState
+    initialState,
   } = options
 
   return render(

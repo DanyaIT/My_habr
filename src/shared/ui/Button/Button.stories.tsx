@@ -110,5 +110,12 @@ SquareSizeXL.args = {
     size: SizeButton.XL
 }
 
+export const Disabled = Template.bind({})
+Disabled.args = {
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    disabled: true,
+    children: '>'
+}
+
 
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]
