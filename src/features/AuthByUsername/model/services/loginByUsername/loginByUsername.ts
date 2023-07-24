@@ -5,7 +5,6 @@ import { User, userActions } from "entities/User";
 import { LOCAL_STORAGE_USER_KEY } from 'shared/const/const';
 
 
-
 interface LoginByUsernameProps {
     username: string,
     password: string,
