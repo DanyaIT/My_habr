@@ -4,9 +4,9 @@ import cls from './LoginForm.module.scss'
 import { useTranslation } from 'react-i18next'
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { useSelector, useStore } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { LoginActions, LoginReducer } from '../../model/slice/LoginSlice';
-import { useAppDispatch } from 'app/providers/StoreProvider';
+
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
@@ -14,13 +14,15 @@ import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLogi
 import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading'
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'app/providers/StoreProvider';
 
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void
 }
 
-const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
+const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
 
     const { t } = useTranslation()
     const dispatch = useAppDispatch()
@@ -40,8 +42,11 @@ const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
         dispatch(LoginActions.setPassword(value))
     }, [dispatch])
 
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }))
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }))
+        if(result.meta.requestStatus === 'fulfilled'){
+            onSuccess();
+        }
     }, [dispatch, username, password])
 
     return (

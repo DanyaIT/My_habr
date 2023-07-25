@@ -1,17 +1,20 @@
 import { AboutPage } from 'Page/AboutPage'
 import { MainPage } from 'Page/MainPage'
 import { NotFoundPage } from 'Page/NotFoundPage'
+import { ProfilePage } from 'Page/ProfilePage'
 import { RouteProps } from 'react-router-dom'
 
 export enum RouteApp {
   MAIN = 'main',
   ABOUT = 'about',
-  NOT_FOUND = 'not_found'
+  NOT_FOUND = 'not_found',
+  PROFILE = 'profile'
 }
 
 export const RoutePath: Record<RouteApp, string> = {
   [RouteApp.MAIN]: '/',
   [RouteApp.ABOUT]: '/about',
+  [RouteApp.PROFILE]: '/profile',
   [RouteApp.NOT_FOUND]: '*',
 }
 
@@ -24,6 +27,11 @@ export const RouteConfig: Record<RouteApp, RouteProps> = {
   [RouteApp.ABOUT]: {
     path: RoutePath.about,
     element: <AboutPage/>
+  },
+
+  [RouteApp.PROFILE]: {
+    path: RoutePath.profile,
+    element: <ProfilePage/>
   },
 
   [RouteApp.NOT_FOUND]: {

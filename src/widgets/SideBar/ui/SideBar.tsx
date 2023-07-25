@@ -1,20 +1,18 @@
-import { FC, useState } from "react";
+import { memo, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./SideBar.module.scss";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import LangSwitcher from "widgets/LangSwitcher/ui/LangSwitcher";
 import { Button, SizeButton, ThemeButton } from "shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import MainPage from "shared/assets/icons/MainPage.svg";
-import AboutPage from "shared/assets/icons/AboutPage.svg";
+import { SideBarItemsTypeList } from "../model/items";
+import { SideBarItems } from "../SideBarItems/SideBarItems";
 
 interface SideBarProps {
   className?: string;
 }
 
-export const SideBar = ({ className }:SideBarProps) => {
+export const SideBar = memo(({ className }:SideBarProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const {t} = useTranslation();
   const onToggle = () => {
@@ -29,24 +27,14 @@ export const SideBar = ({ className }:SideBarProps) => {
       data-testid="sidebar"
     >
       <div className={cls.items}>
-        <AppLink
-          to={RoutePath.main}
-          theme={AppLinkTheme.PRIMARY}
-          className={cls.item}
-        >
-          <MainPage className={cls.icon} />
-          <span className={cls.link}>{t("Главная")}</span>
-        </AppLink>
-
-        <AppLink
-          to={RoutePath.about}
-          theme={AppLinkTheme.PRIMARY}
-          className={cls.item}
-        >
-          <AboutPage className={cls.icon} />
-          <span className={cls.link}>{t('О сайте')}</span>
-        </AppLink>
+        {SideBarItemsTypeList.map(item => (
+          <SideBarItems 
+          key = {item.path}
+          collapsed = {collapsed}
+          item={item} />
+        ))}
       </div>
+
       <Button
         theme={ThemeButton.BACKGROUND_INVERTED}
         square
@@ -63,4 +51,4 @@ export const SideBar = ({ className }:SideBarProps) => {
       </div>
     </div>
   );
-};
+});
