@@ -3,8 +3,8 @@
 # Cтек: Node.js, React, Redux/Toolkit, TypeScript, Webpack, Feature-Sliced Design.
 # Старт
   "scripts": {
-    1."build": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production",
+    1."build": "webpack --env mode=development";
+    2."build:prod": "webpack --env mode=production",
     "start:dev:server": "node ./json-server/index.js",
     "start": "webpack serve --env port=3000",
     "lint:ts": "npx eslint **/*.{tsx,ts,js}",
