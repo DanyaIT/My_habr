@@ -3,6 +3,7 @@ import { StateSchema, ReducerManager } from './StateSchema';
 import { DeepPartial, ReducersMapObject, configureStore } from "@reduxjs/toolkit";
 import { userReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
+import { profileReducer } from 'Page/ProfilePage';
 
 
 

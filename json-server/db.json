@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Danya",
+    "lastname": "Ocheretin",
+    "age": "24",
+    "currency": "RUB",
+    "contry": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://yandex.ru/images/search?family=yes&from=tabbar&img_url=https%3A%2F%2Fpbs.twimg.com%2Fcard_img%2F1542845785477357568%2FmLHJnUq0%3Fformat%3Djpg%26name%3Dlarge&lr=213&pos=4&rpt=simage&text=%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82"
+  }
 }

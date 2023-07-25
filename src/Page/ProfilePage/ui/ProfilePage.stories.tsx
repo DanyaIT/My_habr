@@ -4,11 +4,12 @@ import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import ProfilePage from "./ProfilePage";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 export default {
   title: "Page/ProfilePage",
   component: ProfilePage,
-  decorators: [ThemeDecorator(Theme.NORMAL),RouterDecorator],
+  decorators: [ThemeDecorator(Theme.NORMAL), RouterDecorator],
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -20,8 +21,10 @@ export const Light = Template.bind({});
 Light.args = {
 
 }
+Light.decorators = [StoreDecorator({})]
+
 export const Dark = Template.bind({});
 Dark.args = {
 
 }
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]
