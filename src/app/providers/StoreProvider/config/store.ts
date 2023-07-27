@@ -1,6 +1,6 @@
 import { counterReducer } from 'entities/Counter';
 import { StateSchema, ReducerManager } from './StateSchema';
-import { DeepPartial, ReducersMapObject, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { CombinedState, DeepPartial, Reducer, ReducersMapObject, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { userReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
 import { profileReducer } from 'Page/ProfilePage';
@@ -25,7 +25,7 @@ export function createReduxStore(
     const reducerManager = createReducerManager(rootReducer)
 
     const store = configureStore({
-        reducer: reducerManager.reduce,
+        reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
         middleware: getDefaultMiddleware => getDefaultMiddleware({

@@ -10,6 +10,7 @@ interface InputProps extends HTMLIputProps {
     value?: string,
     onChange?: (value: string) => void,
     autofocus?: boolean,
+    placeholder?: string | undefined 
 }
 
 export const Input: FC<InputProps> = memo((props) => {

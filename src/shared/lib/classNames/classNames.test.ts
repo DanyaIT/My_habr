@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 
 describe('classNames', () => {
     test('classNames with 1 param', () => {
-        expect(classNames("SomeClass")).toBe("SomeClass");
+        expect(classNames("SomeClass", {}, [])).toBe("SomeClass");
     })
 
     test('classNames with additional', () => {

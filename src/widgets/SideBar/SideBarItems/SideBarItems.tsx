@@ -16,7 +16,7 @@ export const SideBarItems: FC<SideBarItemsProps> = memo(({item, collapsed}) => {
             <AppLink
                 to={item.path}
                 theme={AppLinkTheme.PRIMARY}
-                className = {classNames(cls.item, {[cls.collapsed]: collapsed})}
+                className = {classNames(cls.item, {[cls.collapsed]: collapsed}, [])}
             >
                 <item.Icon className={cls.icon} />
                 <span className={cls.link}>{t(item.text)}</span>

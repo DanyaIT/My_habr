@@ -20,12 +20,12 @@ export const Text = memo((props:TextProps) => {
         className,
         text,
         theme = TextTheme.PRIMARY,
-        title
+        title,
     } = props
 
     return (
         <div className = {classNames(cls.Text, {[cls[theme]]:true}, [className || ''])}>
-            {title && <p className= {cls.title}>{title}</p>}
+            {title  && <p className= {cls.title}>{title}</p>}
             {text && <p className= {cls.text}>{text}</p>}
         </div>
     )
