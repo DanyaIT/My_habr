@@ -22,7 +22,7 @@ export interface LoginFormProps {
     onSuccess: () => void
 }
 
-const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
+const LoginForm: FC<LoginFormProps> = (({ className, onSuccess }) => {
 
     const { t } = useTranslation()
     const dispatch = useAppDispatch()
@@ -30,6 +30,7 @@ const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
     const password = useSelector(getLoginPassword)
     const isLoading = useSelector(getLoginLoading)
     const error = useSelector(getLoginError)
+
     const initialReducers:ReducersList = {
         LoginForm: LoginReducer,
     }

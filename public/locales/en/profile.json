@@ -1,4 +1,17 @@
 {
     "Редактировать": "Edit",
-    "Профиль":"Profile"
+    "Профиль":"Profile",
+    "Произошла непредвиденная ошибка": "Unexpected error",
+    "Обновите страницу": "Reload page",
+    "Отменить": "Cancel",
+    "Сохранить": "Save",
+    "Укажите возраст": "Specify the age",
+    "Укажите страну": "Specify the country",
+    "Укажите город": "Specify the city",
+    "Укажите имя": "Specify the Firstname",
+    "Укажите фамилию": "Specify the Secondname",
+    "Укажите псевдоним": "Specify username",
+    "Укажите ссылку на аватар": "Specify link on avatar",
+    "Выберите валюту": "Choose a currency",
+    "Выберите страну": "Choose a country"
 }

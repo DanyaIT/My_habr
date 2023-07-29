@@ -2,11 +2,13 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { SideBar} from "./SideBar";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 
 
 export default {
   title: "widgets/SideBar",
   component: SideBar,
+  decorators:[ThemeDecorator(Theme.NORMAL), RouterDecorator],
   argTypes: {
     backgroundColor: { control: "color" },
   },

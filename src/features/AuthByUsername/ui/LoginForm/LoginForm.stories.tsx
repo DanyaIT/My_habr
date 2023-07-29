@@ -8,7 +8,7 @@ import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDeco
 export default {
   title: "features/LoginForm",
   component: LoginForm,
-  decorators: [ThemeDecorator(Theme.NORMAL)],
+  decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({})],
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -19,13 +19,13 @@ const Template: StoryFn <typeof LoginForm> = (args) => <LoginForm {...args}/>
 export const Primary = Template.bind({});
 Primary.args = {}
 Primary.decorators = [StoreDecorator({
-  LoginForm: {username: 'admin', password: '123', isLoading:false}
+  LoginForm: {username: 'admin', password: '123'}
 })]
 
 export const withError = Template.bind({});
 withError.args = {}
 withError.decorators = [StoreDecorator({
-  LoginForm: {username: 'admin', password: '123', error: 'error', isLoading: false}
+  LoginForm: {username: 'admin', password: '123', error: 'error'}
 })]
 
 export const Loading = Template.bind({});
