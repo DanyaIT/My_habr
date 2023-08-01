@@ -26,6 +26,7 @@
       }
     },
     "include": [
+      "./.fttemplates",
       "./config/jest/setupTests.ts",
       "./src/**/*.ts",
       "./src/**/*.tsx", "src/shared/config/storybook/RouterDecorator", "src/features/AuthByUsername/model/services/loginByUsername", "src/features/AuthByUsername/model/selectors/getLoginUsername",
