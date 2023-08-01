@@ -26,7 +26,7 @@ Primary.args = {
 
 export const Small = Template.bind({});
 Small.args = {
-    size:50,
+    size:150,
     src: AvatarImage,
     
 }
