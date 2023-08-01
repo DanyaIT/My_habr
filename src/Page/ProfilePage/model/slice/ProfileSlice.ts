@@ -4,8 +4,6 @@ import { fetchProfileData } from "../service/fetchProfileData/fetchProfileData";
 import { updateProfileData } from "../service/updateProfileData/updateProfileData";
 
 
-
-
 const initialState: ProfileShema = {
     readonly: true,
     isLoading: false,
@@ -25,10 +23,12 @@ const ProfileSlice = createSlice({
 
         resetProfile: (state) => {
             state.readonly = true,
-                state.form = state.data
+            state.form = state.data
+            state.validateError = undefined
         },
 
         updateProfile: (state, action: PayloadAction<Profile>) => {
+            state.validateError = undefined
             state.form = {
                 ...state.form,
                 ...action.payload
@@ -54,17 +54,18 @@ const ProfileSlice = createSlice({
 
             .addCase(updateProfileData.pending, (state, action) => {
                 state.isLoading = true
-                state.error = undefined
+                state.validateError = undefined
             })
             .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
                 state.isLoading = false
                 state.data = action.payload
                 state.form = action.payload
                 state.readonly = true
+                state.validateError = undefined
             })
             .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false
-                state.error = action.payload
+                state.validateError = action.payload
             })
 
     }

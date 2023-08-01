@@ -1,6 +1,6 @@
 {
     "Редактировать": "Edit",
-    "Профиль":"Profile",
+    "Профиль": "Profile",
     "Произошла непредвиденная ошибка": "Unexpected error",
     "Обновите страницу": "Reload page",
     "Отменить": "Cancel",
@@ -9,9 +9,15 @@
     "Укажите страну": "Specify the country",
     "Укажите город": "Specify the city",
     "Укажите имя": "Specify the Firstname",
-    "Укажите фамилию": "Specify the Secondname",
+    "Укажите фамилию": "Specify the Lastname",
     "Укажите псевдоним": "Specify username",
     "Укажите ссылку на аватар": "Specify link on avatar",
     "Выберите валюту": "Choose a currency",
-    "Выберите страну": "Choose a country"
+    "Выберите страну": "Choose a country",
+    "Укажите корректный возраст": "Specify the correct age",
+    "Укажите существующий город": "Specify an existing city",
+    "Укажите существующий страну": "Specify an existing country",
+    "Укажите все данные о себе": "Specify all the data about yourself",
+    "Ошибка на стороне сервера": "Server-side error",
+    "Укажите верное имя и фамилию": "Enter the correct first and last name"
 }
