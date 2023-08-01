@@ -22,6 +22,8 @@
  18. "storybook:build": "storybook build -c ./config/storybook"
 # Интерфейс
 Главаня страница: ![image](https://github.com/DanyaIT/My_habr/assets/105100908/25ed04e3-19f3-4ba3-8f2b-573e31651b55)
+Профиль пользователя: ![image](https://github.com/DanyaIT/My_habr/assets/105100908/b24e4e32-aef8-435f-98dc-7db58560b6aa)
+
 
 
  
