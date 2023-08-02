@@ -6,7 +6,7 @@ import { LOCAL_STORAGE_USER_KEY } from "shared/const/const";
 
 
 const initialState:UserSchema = {
-    
+    _init: false,
 }
 
 
@@ -23,6 +23,7 @@ export const UserSlice = createSlice({
             if(user){
                 state.authData = JSON.parse(user);
             }    
+            state._init = true;
         },
 
         logout: (state) => {

@@ -31,7 +31,7 @@ Primary.args = {
         city: "ASDdsf",
         username: "Adsf",
         country: Country.Armenia,
-        avatar: `${AvatarImg}`,
+        avatar: AvatarImg,
     }
 }
 

@@ -6,8 +6,8 @@ import { Navbar } from 'widgets/Navbar'
 import { AppRouter } from './providers/router'
 import { SideBar } from 'widgets/SideBar'
 import { Suspense, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { userActions } from 'entities/User'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserInitData, userActions } from 'entities/User'
 
 
 
@@ -15,6 +15,8 @@ import { userActions } from 'entities/User'
 const App = () => {
   const { theme } = useTheme()
   const dispatch = useDispatch()
+  const init = useSelector(getUserInitData)
+
   useEffect(() => {
     dispatch(userActions.initAuthDate())
   }, [dispatch])
@@ -25,7 +27,7 @@ const App = () => {
       <Navbar />
       <div className='content-page'>
         <SideBar />
-        <AppRouter />
+        {init && <AppRouter />}
       </div>
     </Suspense>
   </div>
