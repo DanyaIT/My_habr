@@ -1,11 +1,13 @@
 .title{
-    font-size: var(--font-size-l);
-    color: var(--primary-color)
+    color: var(--primary-color);
+    margin-bottom: 10px;
+
 }
 
 .text{
-    font-size: var(--font-size-m);
-    color: var(--secondary-color)
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+
 }
 
 
@@ -29,4 +31,25 @@
 
 .center{
     text-align: center;
+
+}
+
+.size_m{
+    .title{
+        font-size: var(--font-size-l);
+    }
+
+    .text{
+        font-size: var(--font-size-m);
+    }
+}
+
+.size_l{
+    .title{
+        font-size: var(--font-size-xl);
+    }
+
+    .text{
+        font-size: var(--font-size-l);
+    }
 }

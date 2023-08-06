@@ -16,5 +16,6 @@
     "Введите пароль": "Enter password",
     "Форма авторизации": "Authorization form",
     "Профиль": "Profile",
-    "Указано неверное имя пользователя или пароль": "Invalid username or password specified"
+    "Указано неверное имя пользователя или пароль": "Invalid username or password specified",
+    "Статьи": "Articles"
 }

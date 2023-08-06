@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './CountrySelector.module.scss'
 import { Select } from 'shared/ui/Select/Select';
-import { Country } from '../model/type';
+import { Country } from '../model/types/countrySelect';
 
 interface CountrySelectorProps {
     className?: string,

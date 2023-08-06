@@ -1,8 +1,8 @@
-import { isLoading } from './../../../../entities/Profile/ui/ProfileCard/ProfileCard.stories';
+
 import { DeepPartial } from "@reduxjs/toolkit"
 import { profileAction, profileReducer } from "./ProfileSlice"
 import { ProfileShema, ValidateProfileData } from "../types/profile"
-import { Country } from "entities/Country/model/type"
+import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { updateProfileData } from "../service/updateProfileData/updateProfileData"
 

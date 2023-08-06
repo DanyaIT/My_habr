@@ -13,7 +13,7 @@ import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileDataForm } from '../model/selectors/getProfileDataForm/getProfileDataForm';
 import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country/model/type';
+import { Country } from 'entities/Country/model/types/countrySelect';
 import { getProfileValidateData } from '../model/selectors/getProfileValidateData/getProfileValidateData';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileData } from '../model/types/profile';

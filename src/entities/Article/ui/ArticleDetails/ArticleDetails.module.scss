@@ -1,0 +1,37 @@
+.ArticleDetails {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+.ArticleInfo{
+	display: flex;
+	align-items: center;	
+}
+
+.Icon{
+	margin-right: 7px;
+}
+
+.AvatarWrapper{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.Sceleton{
+	margin-top: 15px;
+}
+
+.Avatar {
+	margin: 0 auto;
+}
+
+.Title{
+	margin-top: 25px;
+}
+
+.Block{
+	margin-top: 16px;
+}

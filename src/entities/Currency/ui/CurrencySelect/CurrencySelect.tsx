@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Currency } from 'entities/Currency/model/type';
+import { Currency } from 'entities/Currency/model/types/currency';
 import { Select } from 'shared/ui/Select/Select';
 
 interface CurrencySelectProps {
@@ -15,6 +15,7 @@ const options = [
     {value: Currency.RUB, content: Currency.RUB},
     {value: Currency.USD, content: Currency.USD},
     {value: Currency.EUR, content: Currency.EUR},
+
     
 ]
 

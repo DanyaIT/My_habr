@@ -3,7 +3,7 @@ import { ProfileCard } from "./ProfileCard";
 import { Meta, StoryFn } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import { Currency } from "entities/Currency";
-import { Country } from "entities/Country/model/type";
+import { Country } from "entities/Country/model/types/countrySelect";
 import AvatarImg from '../../../../shared/assets/tests/Storybook.jpg'
 
 
@@ -40,7 +40,7 @@ WithError.args = {
     error: 'error',
 }
 
-export const isLoading = Template.bind({})
-isLoading.args = {
-    isLoading: true,
+export const IsLoading = Template.bind({})
+IsLoading.args = {
+    isLoading: true
 }

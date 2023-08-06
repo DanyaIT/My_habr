@@ -1,11 +1,18 @@
 
 .app_normal_theme{
-    --bg-color:rgb(238, 238, 243);
-    --inverted-bg-color: rgb(15, 15, 129);
+    --bg-color:rgb(149, 149, 153);
+    --inverted-bg-color: rgb(13, 13, 125);
 
     --primary-color:rgb(6, 6, 251);
-    --secondary-color: rgb(3, 3, 126);
+    --secondary-color: rgb(4, 4, 194);
 
     --inverted-primary-color:rgb(8, 247, 8);
     --inverted-secondary-color: rgb(5, 129, 5);
+        
+    // skeleton
+    --skeleton-color:rgb(168, 168, 168);
+    --skeleton-shadow:rgb(0, 0, 0);
+
+    // code
+    --code-bg: rgb(149, 149, 153);
 }

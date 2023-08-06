@@ -1,6 +1,6 @@
 import { DeepPartial } from "@reduxjs/toolkit"
 import { StateSchema } from "app/providers/StoreProvider"
-import { Country } from "entities/Country/model/type"
+import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { getProfileDataForm } from "./getProfileDataForm"
 

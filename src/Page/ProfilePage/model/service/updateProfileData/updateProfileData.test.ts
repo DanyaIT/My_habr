@@ -1,4 +1,4 @@
-import { Country } from "entities/Country/model/type"
+import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { TestAsyncThunk } from "shared/lib/TestAsuncThunk/TestAsuncThunk"
 import { updateProfileData } from "./updateProfileData"

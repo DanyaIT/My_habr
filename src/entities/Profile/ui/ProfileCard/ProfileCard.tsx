@@ -10,7 +10,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { CurrencySelect } from 'entities/Currency/ui/CurrencySelect/CurrencySelect';
 import { Currency } from 'entities/Currency';
 import { CountrySelect } from 'entities/Country';
-import { Country } from 'entities/Country/model/type';
+import { Country } from 'entities/Country/model/types/countrySelect';
 
 
 

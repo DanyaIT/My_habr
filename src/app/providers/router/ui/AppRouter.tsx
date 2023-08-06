@@ -13,7 +13,6 @@ import { RequireAuth } from './RequireAuth'
 
 const AppRouter = () => {
 
-  const isAuth = useSelector(getUserAuthData)
   
   const renderWithWrapper = (route: AppRouterProps) => {
     const element = (

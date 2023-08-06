@@ -1,6 +1,6 @@
 import { validateProfileData } from './../service/validateProfileData/validateProfileData';
 
-import { Country } from "entities/Country/model/type";
+import { Country } from "entities/Country/model/types/countrySelect";
 import { Currency } from "entities/Currency";
 
 

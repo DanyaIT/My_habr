@@ -1,6 +1,6 @@
 
 import { Profile } from "../../types/profile"
-import { Country } from "entities/Country/model/type"
+import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { getProfileData } from "./getProfileData"
 import { DeepPartial } from "@reduxjs/toolkit"

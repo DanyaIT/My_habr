@@ -5,7 +5,7 @@ import { Theme } from "app/providers/ThemeProvider";
 import ProfilePage from "./ProfilePage";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Country } from "entities/Country/model/type";
+import { Country } from "entities/Country/model/types/countrySelect";
 import { Currency } from "entities/Currency";
 
 export default {

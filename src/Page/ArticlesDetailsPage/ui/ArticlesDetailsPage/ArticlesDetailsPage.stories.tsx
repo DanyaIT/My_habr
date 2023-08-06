@@ -6,7 +6,7 @@ import { Theme } from "app/providers/ThemeProvider";
 
 
 export default {
-   title: 'shared/ArticlesDetailsPage',
+   title: 'Page/ArticlesDetailsPage',
    component: ArticlesDetailsPage,
    decorators: [ThemeDecorator(Theme.NORMAL)],
    argTypes: {
