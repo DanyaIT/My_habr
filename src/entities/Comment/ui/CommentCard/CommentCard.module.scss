@@ -1,0 +1,22 @@
+.CommentCard {
+	border: 2px solid var(--primary-color);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.CommentUser{
+    display: flex;
+    align-items: center;
+}
+
+.Avatar{
+    margin-right: 15px;
+}
+
+.Username{
+    margin-left: 10px;
+}
+
+.Text{
+    margin-top: 10px;
+}

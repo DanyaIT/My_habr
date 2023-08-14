@@ -14,7 +14,7 @@ export const Skeleton: FC<SkeletonProps> = (props) => {
    const { className, height, width, border } = props;
 
    const styles:CSSProperties = {
-      width,
+      maxWidth: width,
       height,  
       borderRadius: border,
    }

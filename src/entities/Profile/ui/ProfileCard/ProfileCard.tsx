@@ -87,6 +87,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
                             size={200}
                             src={data.avatar}
                             alt=''
+                            circle
                         />
                     </div>
                 )}

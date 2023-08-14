@@ -1,5 +1,5 @@
-import { CSSProperties, FC, useMemo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { CSSProperties, FC, memo, useMemo } from 'react'
+import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './Avatar.module.scss'
 import { Profile } from 'Page/ProfilePage';
@@ -9,10 +9,11 @@ interface AvatarProps {
     alt?: string,
     size?: number,
     src?: string,
+    circle?: boolean,
 }
 
 
-export const Avatar: FC<AvatarProps> = ({ className, alt, src, size }) => {
+export const Avatar: FC<AvatarProps> = memo(({ className, alt, src, size, circle }) => {
 
 
     const styles:CSSProperties = useMemo(() => ({
@@ -20,8 +21,12 @@ export const Avatar: FC<AvatarProps> = ({ className, alt, src, size }) => {
         height : size || 100,
     }), [size])
 
+    const mods:Mods = {
+        [cls.Circle] : circle
+    }
+
     return (
-        <div className={classNames(cls.Avatar, {}, [className])}>
+        <div className={classNames(cls.Avatar, mods, [className])}>
             <img
                 style={styles}
                 src={src}
@@ -29,4 +34,4 @@ export const Avatar: FC<AvatarProps> = ({ className, alt, src, size }) => {
             />
         </div>
     )
-}
+})

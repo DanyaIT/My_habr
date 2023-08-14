@@ -1,1 +1,5 @@
 export {ArticlesDetailsPageAsync as ArticlesDetailsPage} from './ui/ArticlesDetailsPage/ArticlesDetailsPage.async'
+export {ArticleDetailsCommentSchema} from './model/types/ArticleDetailsCommentSchema'
+export {getArticleComments, articleDetailsCommentReducer}  from './model/slice/ArticleDetailsCommentSlice'
+export {getArticleDetailsCommentIsloading, getArticleDetailsCommentError} from './model/selectors/comments'
+export {fetchCommentsByArticleId} from './model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
