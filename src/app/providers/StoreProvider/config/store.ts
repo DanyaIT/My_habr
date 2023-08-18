@@ -1,9 +1,8 @@
 import { counterReducer } from 'entities/Counter';
-import { StateSchema, ReducerManager } from './StateSchema';
+import { StateSchema } from './StateSchema';
 import { CombinedState, DeepPartial, Reducer, ReducersMapObject, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { userReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
-import { profileReducer } from 'Page/ProfilePage';
 import { $api } from 'shared/api/api';
 import { NavigateOptions, To } from 'react-router-dom';
 

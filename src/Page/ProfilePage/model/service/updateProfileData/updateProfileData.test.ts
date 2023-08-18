@@ -12,6 +12,7 @@ const profileData = {
     city: "ASDdsf",
     username: "Adsf",
     country: Country.Armenia,
+    id:'1'
 }
 describe('udateProfileData', () => {
     test('Sucess response', async () => {

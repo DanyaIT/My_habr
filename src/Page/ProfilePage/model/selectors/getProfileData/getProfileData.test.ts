@@ -1,11 +1,10 @@
 
-import { Profile } from "../../types/profile"
 import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { getProfileData } from "./getProfileData"
 import { DeepPartial } from "@reduxjs/toolkit"
 import { StateSchema } from "app/providers/StoreProvider"
-import { profile } from "console"
+
 
 
 describe('getProfileData', () => {

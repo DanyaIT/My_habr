@@ -6,8 +6,9 @@ import { getLoginLoading } from "./getLoginLoading"
 describe('getLoginLoading.test', () => {
     test('with true loading', () => {
         const state: DeepPartial<StateSchema> = {
-            //@ts-ignore
-            LoginForm: {
+            loginForm: {
+                username: 'Danya',
+                password: '123',
                 isLoading: true,
             }
         }

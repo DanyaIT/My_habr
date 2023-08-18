@@ -6,8 +6,7 @@ import { getLoginState } from "./getLoginState"
 describe('getLoginState.test', () => {
     test('with state', () => {
         const state: DeepPartial<StateSchema> = {
-            //@ts-ignore
-            LoginForm: {
+            loginForm: {
                 username: 'Danya',
                 password: '123',
                 isLoading: true,

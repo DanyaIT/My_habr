@@ -4,19 +4,17 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role" : "ADMIN",
-      "avatar" : "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
+      "role": "ADMIN",
+      "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
     },
-
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role" : "USER",
-      "avatar" : "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
+      "role": "USER",
+      "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
     }
   ],
-
   "posts": [
     {
       "id": "1",
@@ -29,7 +27,6 @@
       "userId": "2"
     }
   ],
-
   "articles": [
     {
       "id": "1",
@@ -38,7 +35,9 @@
       "img": "https://i.pinimg.com/originals/5e/08/f5/5e08f5cd8c99a350852966820bca894f.jpg",
       "views": 1022,
       "createdAt": "26.07.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -101,39 +100,74 @@
       ]
     }
   ],
-
   "comments": [
     {
       "id": "1",
-      "body": "some comment 1",
       "articleId": "1",
       "text": "some text 1",
       "userId": "1"
     },
     {
       "id": "2",
-      "body": "some comment 2",
       "articleId": "1",
       "text": "some text 2",
       "userId": "2"
-      
     },
-     {  
+    {
       "id": "3",
-      "body": "some comment 3",
       "articleId": "1",
       "text": "some text 3",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "text": "123fsd",
+      "userId": "1",
+      "id": "wZ_IL30"
+    },
+    {
+      "articleId": "1",
+      "text": "213",
+      "userId": "2",
+      "id": "qip6S3B"
+    },
+    {
+      "articleId": "1",
+      "text": "321",
+      "userId": "1",
+      "id": "NTmUarq"
+    },
+    {
+      "articleId": "1",
+      "text": "123123",
+      "userId": "2",
+      "id": "u3IE13C"
     }
   ],
-  "profile": {
-    "first": "Danya",
-    "lastname": "Ocheretin",
-    "age": 24,
-    "currency": "USD",
-    "contry": "Russia",
-    "city": "Moscow",
-    "username": "Overlab",
-    "avatar": "https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Danya",
+      "lastname": "Ocheretin",
+      "age": 24,
+      "currency": "USD",
+      "contry": "Russia",
+      "city": "Moscow",
+      "username": "Overl",
+      "avatar": "https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg",
+      "country": "Belarus"
+    },
+    {
+      "id": "2",
+      "first": "Nikita",
+      "lastname": "Ocheretin",
+      "age": 31,
+      "currency": "USD",
+      "contry": "Belarus",
+      "city": "Minsk",
+      "username": "Overlab_2",
+      "avatar": "https://i.pinimg.com/originals/5e/08/f5/5e08f5cd8c99a350852966820bca894f.jpg",
+      "country": "Belarus"
+    }
+  ]
 }

@@ -5,6 +5,7 @@ import { AxiosInstance } from 'axios';
 import { ArticleDetailsShema } from 'entities/Article';
 import { CounterSchema } from "entities/Counter";
 import { UserSchema } from "entities/User";
+import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from "features/AuthByUsername";
 import { NavigateOptions, To } from 'react-router-dom';
 
@@ -15,9 +16,11 @@ export interface StateSchema {
     
     // Асинхронные reducers
     profile?: ProfileShema,
-    LoginForm?: LoginSchema,
+    loginForm?: LoginSchema,
     articleDetails?: ArticleDetailsShema,
-    ArticleDetailsComments?: ArticleDetailsCommentSchema;
+    articleDetailsComments?: ArticleDetailsCommentSchema;
+    addCommentForm?: AddCommentFormSchema;
+    
 }
 
 export interface ReducerManager {

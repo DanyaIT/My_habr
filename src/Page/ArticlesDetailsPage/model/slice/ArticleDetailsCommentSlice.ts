@@ -15,11 +15,11 @@ import { fetchCommentsByArticleId } from 'Page/ArticlesDetailsPage';
   
 
   export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.ArticleDetailsComments || commentsAdapter.getInitialState()
+    (state) => state.articleDetailsComments || commentsAdapter.getInitialState()
   )
 
   
-  const ArticleDetailsCommentSlice = createSlice({
+  const articleDetailsCommentSlice = createSlice({
     name: 'ArticleDetailsCommentSlice',
     initialState: commentsAdapter.getInitialState<ArticleDetailsCommentSchema>({
         isLoading: false,
@@ -48,4 +48,4 @@ import { fetchCommentsByArticleId } from 'Page/ArticlesDetailsPage';
     
   })
 
-export const {reducer: articleDetailsCommentReducer} = ArticleDetailsCommentSlice
+export const {reducer: articleDetailsCommentReducer} = articleDetailsCommentSlice

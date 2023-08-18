@@ -33,6 +33,7 @@ interface ProfileCardProps {
 
 }
 
+
 export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
     const { t } = useTranslation('profile')
     const {

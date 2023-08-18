@@ -1,16 +1,20 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { StoryFn } from '@storybook/react';
+import { articleDetailsCommentReducer } from 'Page/ArticlesDetailsPage';
 import { profileReducer } from 'Page/ProfilePage';
 import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
 import { articleDetailsReducer } from 'entities/Article';
+import { addCommentFormReducer } from 'features/AddCommentForm/model/slice/addCommentSlice';
 import { LoginReducer } from 'features/AuthByUsername';
 import { ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 
 
 const defaultAsyncReducers:ReducersList = {
-    LoginForm: LoginReducer,
+    loginForm: LoginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
+    addCommentForm: addCommentFormReducer,
+    articleDetailsComments: articleDetailsCommentReducer,
 }
 
 export const StoreDecorator = (

@@ -1,11 +1,12 @@
-import { FC } from 'react';
+import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './CommentList.module.scss';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Text } from 'shared/ui/Text/Text';
 import { Comment } from 'entities/Comment/model/types/comment';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+
+
 
 interface CommentListProps {
    className?: string;
@@ -13,9 +14,21 @@ interface CommentListProps {
    isLoading?: boolean,
 }
 
-export const CommentList: FC<CommentListProps> = (props) => {
+export const CommentList: FC<CommentListProps> = memo((props) => {
    const { className, comments, isLoading } = props;
    const { t } = useTranslation()
+
+
+   if(isLoading){
+      return (
+         <div className={classNames(cls.CommentList, {}, [className])}>
+            <CommentCard isLoading = {true}/>
+            <CommentCard isLoading = {true}/>
+            <CommentCard isLoading = {true}/>
+         </div>
+      )
+   }
+
 
    return (
       <div className={classNames(cls.CommentList, {}, [className])}>
@@ -31,4 +44,4 @@ export const CommentList: FC<CommentListProps> = (props) => {
          }
       </div>
    );
-}
+})

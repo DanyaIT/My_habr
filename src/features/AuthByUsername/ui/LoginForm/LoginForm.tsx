@@ -32,7 +32,7 @@ const LoginForm: FC<LoginFormProps> = (({ className, onSuccess }) => {
     const error = useSelector(getLoginError)
 
     const initialReducers:ReducersList = {
-        LoginForm: LoginReducer,
+        loginForm: LoginReducer,
     }
 
     const onChangeUsername = useCallback((value) => {
