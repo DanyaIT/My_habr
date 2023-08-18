@@ -25,13 +25,13 @@ Normal.args = {
          id: '1',
          articleId: '1',
          text: "some text 1",
-         user: {username: 'Overlab', id: '1', avatar:'https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg'}
+         user: {username: 'Overlab', id: '1'}
       },
       {
          id: '2',
          articleId: '2',
          text: "some text 2",
-         user: {username: 'Overlab_2', id: '2', avatar:'https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg'}
+         user: {username: 'Overlab_2', id: '2'}
       }
    ]
 };
