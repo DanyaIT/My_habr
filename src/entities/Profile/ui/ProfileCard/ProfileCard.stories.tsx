@@ -4,7 +4,7 @@ import { Meta, StoryFn } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country/model/types/countrySelect";
-import AvatarImg from '../../../../shared/assets/tests/Storybook.jpg'
+import AvatarImg from 'shared/assets/tests/Storybook.jpg'
 
 
 
