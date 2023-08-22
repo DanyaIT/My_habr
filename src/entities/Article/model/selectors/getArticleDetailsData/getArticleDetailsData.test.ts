@@ -1,6 +1,6 @@
 import { DeepPartial } from "@reduxjs/toolkit"
 import { ArticleDetailsShema } from "../../types/articleDetailsShema"
-import { ArticleBlockBlockType, ArticleType } from "../../types/article"
+import { Article, ArticleBlockBlockType, ArticleType } from "../../types/article"
 import { StateSchema } from "app/providers/StoreProvider"
 import { getArticleDetailsData } from "./getArticleDetailsData"
 
@@ -13,6 +13,7 @@ describe('getArticleDetailsData', () => {
             "subtitle": "Что нового в JS за 2023 год?",
             "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
             "views": 1022,
+            "user": {"username": "Danya", "id":"1"},
             "createdAt": "26.07.2023",
             "type": [ArticleType.IT],
             "blocks": [
@@ -85,7 +86,7 @@ describe('getArticleDetailsData', () => {
     }) 
 
     test('With empty state', ()=> {
-        const data = {}
+        const data = {} as Article
          const state:DeepPartial<StateSchema> = {
             articleDetails:{
                 data

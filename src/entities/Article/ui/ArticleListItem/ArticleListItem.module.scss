@@ -1,0 +1,104 @@
+.LIST{
+    .Views{
+        margin-left: auto;
+        margin-right: 8px;
+    }
+    .Header {
+        display: flex;
+        align-items: center;
+    }
+    .Avatar {  
+        
+    }
+    .UserName {
+        margin-left: 8px;
+    }
+    .Data {
+        margin-left: auto;
+    }
+    .Title {
+        margin-top: 8px;
+    }
+    .Image{
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        margin: 16px 0;
+    }  
+    .Text {
+
+    }
+
+    .Footer {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+    }
+
+    .ArticleTextBlock{
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+}
+
+
+
+.PLATE{
+    width: 230px;
+    transition: 0.5s;
+    cursor: pointer;
+    .Data {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+
+    .ImageWrapper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .Img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .InfoWrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+    }
+    .Type p{
+        width: 110px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    }
+    .Views {
+        margin-left: auto;
+        margin-right: 8px;
+    }
+    .Icon {
+        margin-bottom: 5px;
+    }
+    .Title{
+        margin-top: 8px;
+    }
+    
+    .Title p {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &:hover{
+        opacity: 0.6;
+        transform: scale(1.05);
+        .Data{
+            display: block;
+        }
+    }
+}
