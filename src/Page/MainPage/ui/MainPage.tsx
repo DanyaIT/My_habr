@@ -1,5 +1,6 @@
 import { BugButton } from 'app/providers/ErrorBoundary'
 import { useTranslation } from 'react-i18next'
+import { Page } from 'shared/ui/Page/Page'
 import { Text } from 'shared/ui/Text/Text'
 
 const MainPage = () => {
@@ -8,13 +9,13 @@ const MainPage = () => {
 
 
   return (
-    <div>{t('Главная страница')}
+    <Page>{t('Главная страница')}
       <BugButton />
-      <Text 
-      text = 'Text for MainPage'
-      title = 'Title for MainPage'
+      <Text
+        text='Text for MainPage'
+        title='Title for MainPage'
       />
-    </div>
+    </Page>
 
   )
 }

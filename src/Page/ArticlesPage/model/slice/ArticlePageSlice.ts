@@ -1,13 +1,14 @@
+import { action } from '@storybook/addon-actions';
 import {
     createSlice,
     createEntityAdapter,
     PayloadAction,
   } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ArticlePageSchema } from '../types/articlePageSchema';
 import { Article, ArticlesView } from 'entities/Article';
 import { fetchArticles } from '../service/fetchArticles/fetchArticles';
 import { LOCAL_STORAGE_ARTICLES_VIEW } from 'shared/const/const';
+import { ArticlePageSchema } from '../types/articlePageSchema';
 
 
   
@@ -28,15 +29,22 @@ import { LOCAL_STORAGE_ARTICLES_VIEW } from 'shared/const/const';
         error: undefined,
         ids: [],
         entities: {},
-        view: ArticlesView.PLATE
+        view: ArticlesView.PLATE,
+        page: 1,
+        hasMore: true
     }),
     reducers: {
       setView: (state, action: PayloadAction<ArticlesView>) => {
         state.view = action.payload;
         localStorage.setItem(LOCAL_STORAGE_ARTICLES_VIEW, action.payload)
       },
-      initView: (state) => {
-        state.view = localStorage.getItem(LOCAL_STORAGE_ARTICLES_VIEW) as ArticlesView
+      initState: (state) => {
+        const view = localStorage.getItem(LOCAL_STORAGE_ARTICLES_VIEW) as ArticlesView;
+        state.view = view;
+        state.limit = view === ArticlesView.LIST? 4 : 9
+      },
+      setPage: (state, action: PayloadAction<number>) => {
+        state.page = action.payload
       }
     },
     extraReducers: (builder) => {
@@ -47,11 +55,12 @@ import { LOCAL_STORAGE_ARTICLES_VIEW } from 'shared/const/const';
       })
       .addCase(fetchArticles.fulfilled, (state, action: PayloadAction<Article[]>) => {
         state.isLoading = false,
-        articleAdapter.setAll(state, action.payload)
+        articleAdapter.addMany(state, action.payload)
+        state.hasMore = action.payload.length > 0
       })
-      .addCase(fetchArticles.rejected, (state) => {
+      .addCase(fetchArticles.rejected, (state, action) => {
         state.isLoading = false,
-        state.error = 'error'
+        state.error = action.payload
       })
     }
     

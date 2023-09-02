@@ -19,6 +19,8 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileData } from '../model/types/profile';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 
 
@@ -38,7 +40,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     const readonly = useSelector(getProfileReadonly)
     const validateData = useSelector(getProfileValidateData)
     const { t } = useTranslation('profile')
-    const { id } = useParams<{id:string}>()
+    const { id } = useParams<{ id: string }>()
     const valodateProfileErrors = {
         [ValidateProfileData.INCORRECT_AGE]: t('Укажите корректный возраст'),
         [ValidateProfileData.INCORRECT_CITY]: t('Укажите существующий город'),
@@ -92,31 +94,34 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     }, [dispatch])
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
-            <ProfilePageHeader />
-            {validateData &&
-                validateData.map(item => (
-                    <Text
-                        text={valodateProfileErrors[item]}
-                        key={item}
-                        theme={TextTheme.ERROR}
-                    />
-                ))
-            }
-            <ProfileCard
-                data={formData}
-                error={error}
-                isLoading={isLoading}
-                onChangeFirstName={onChangeFirstName}
-                onChangeLastName={onChangeLastName}
-                onChangeAge={onChangeAge}
-                onChangeCity={onChangeCity}
-                onChangeAvatar={onChangeAvatar}
-                onChangeUsername={onChangeUsername}
-                onChangeCurrency={onChangeCurrency}
-                onChangeCountry={onChangeCountry}
-                readonly={readonly}
-            />
+        <DynamicModuleLoader reducers={reducers}>
+            <Page className={classNames('', {}, [className])}>
+                <ProfilePageHeader />
+                {validateData &&
+                    validateData.map(item => (
+                        <Text
+                            text={valodateProfileErrors[item]}
+                            key={item}
+                            theme={TextTheme.ERROR}
+                        />
+                    ))
+                }
+                <ProfileCard
+                    data={formData}
+                    error={error}
+                    isLoading={isLoading}
+                    onChangeFirstName={onChangeFirstName}
+                    onChangeLastName={onChangeLastName}
+                    onChangeAge={onChangeAge}
+                    onChangeCity={onChangeCity}
+                    onChangeAvatar={onChangeAvatar}
+                    onChangeUsername={onChangeUsername}
+                    onChangeCurrency={onChangeCurrency}
+                    onChangeCountry={onChangeCountry}
+                    readonly={readonly}
+                />
+
+            </Page>
         </DynamicModuleLoader>
     )
 }

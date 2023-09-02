@@ -14,6 +14,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { AddCommentForm } from 'features/AddCommentForm';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button } from 'shared/ui/Button/Button';
+import { Page } from 'shared/ui/Page/Page';
 
 interface ArticlesDetailsPageProps {
    className?: string;
@@ -56,7 +57,7 @@ const ArticlesDetailsPage: FC<ArticlesDetailsPageProps> = memo((props) => {
 
    return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
          <Button onClick={onBackToList}>
             {t('Назад к спписку статей')}
          </Button>
@@ -67,7 +68,7 @@ const ArticlesDetailsPage: FC<ArticlesDetailsPageProps> = memo((props) => {
             isLoading = {commentsIsLoading}
             comments = {comments}
             />
-      </div>
+      </Page>
       </DynamicModuleLoader>
    );
 })

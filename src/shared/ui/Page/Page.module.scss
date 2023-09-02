@@ -1,0 +1,12 @@
+.Page {
+	padding: 20px 20px 20px 55px;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 100;
+    overflow-y: auto;
+    height: calc(100vh - var(--navbar-height));    
+}
+
+.Div{
+    height: 100px;
+}

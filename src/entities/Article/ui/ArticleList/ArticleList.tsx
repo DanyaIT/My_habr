@@ -36,20 +36,14 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
                new Array(view === ArticlesView.PLATE ? 12 : 3)
                   .fill(0)
                   .map((_, index) => (
-                     <ArticleLostItemSkeleton className = {cls.Card} key={index} view={view} />
+                     <ArticleLostItemSkeleton className={cls.Card} key={index} view={view} />
                   ))
             }
          </>
       )
    }
 
-   if (isLoading) {
-      return(
-         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {getSkeletons(view)}
-         </div>
-      )
-   }
+
 
 
    return (
@@ -58,6 +52,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
             ? articles.map(renderArticles)
             : null
          }
+         {isLoading && getSkeletons(view)}
       </div>
    );
 })
