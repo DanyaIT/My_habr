@@ -1,4 +1,4 @@
-import { action } from '@storybook/addon-actions';
+
 import {
     createSlice,
     createEntityAdapter,
@@ -31,7 +31,8 @@ import { ArticlePageSchema } from '../types/articlePageSchema';
         entities: {},
         view: ArticlesView.PLATE,
         page: 1,
-        hasMore: true
+        hasMore: true,
+        _inited: false,
     }),
     reducers: {
       setView: (state, action: PayloadAction<ArticlesView>) => {
@@ -41,7 +42,8 @@ import { ArticlePageSchema } from '../types/articlePageSchema';
       initState: (state) => {
         const view = localStorage.getItem(LOCAL_STORAGE_ARTICLES_VIEW) as ArticlesView;
         state.view = view;
-        state.limit = view === ArticlesView.LIST? 4 : 9
+        state.limit = view === ArticlesView.LIST? 4 : 9;
+        state._inited = true
       },
       setPage: (state, action: PayloadAction<number>) => {
         state.page = action.payload

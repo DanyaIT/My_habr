@@ -39,7 +39,7 @@ export type StateSchemaKey = keyof StateSchema;
 
 export interface ThunkExtraArgs {
     api:AxiosInstance,
-    navigate?:(to: To, options?: NavigateOptions) => void,
+
 }
 
 export interface ThunkConfig<T> {

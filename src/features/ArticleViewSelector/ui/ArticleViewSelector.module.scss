@@ -5,4 +5,12 @@
 .NotSelected{
     fill: var(--secondary-color);
     stroke: var(--secondary-color);
+
+}
+
+.Icon{
+    transition: ease-in 0.4s;
+}
+.Selected{
+    transform: scale(1.3);
 }

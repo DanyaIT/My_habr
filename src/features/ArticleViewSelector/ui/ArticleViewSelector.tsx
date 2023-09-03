@@ -1,6 +1,6 @@
-import { FC, memo, useCallback } from 'react';
+import { FC, SVGProps, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticlesView } from 'entities/Article';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
@@ -18,6 +18,11 @@ interface ArticleViewSelectorProps {
 export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo((props) => {
    const { className, view, onViewClick } = props;
    const { t } = useTranslation()
+
+   interface toggleView {
+      icon:FC<SVGProps<SVGSVGElement>>;
+      view: ArticlesView;
+   }
 
    const viewArticleType = [
       {
@@ -37,12 +42,20 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo((props) =>
       }
    },[])
 
+  const toggleView = (articleType:toggleView) => {
+   const mods: Mods = {
+      [cls.NotSelected]: articleType.view !== view,
+      [cls.Selected]: articleType.view === view,
+   }
+   return mods
+  }
+
    return (
       <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-         {viewArticleType.map(articleType => (
-            <Button theme={ThemeButton.CLEAR} onClick={onClick(articleType.view)}>
+         {viewArticleType.map((articleType) => (
+            <Button key = {articleType.view} theme={ThemeButton.CLEAR} onClick={onClick(articleType.view)}>
                <Icon
-               className={classNames('', {[cls.NotSelected]: articleType.view !== view}, [className])} 
+               className={classNames(cls.Icon, toggleView(articleType), [className])} 
                Svg={articleType.icon}/>
             </Button>
          ))}

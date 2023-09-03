@@ -20,8 +20,9 @@ export const ArticleTextBlockComponent: FC<ArticleTextComponentProps> = memo((pr
          title={block.title}
          />
         }   
-        {block.paragraphs.map(text => (
+        {block.paragraphs.map((text, index) => (
          <Text 
+         key={index}
          text={text}
          />
         ))}

@@ -12,7 +12,6 @@ import { NavigateOptions, To } from 'react-router-dom';
 export function createReduxStore(
     initialState?: StateSchema,
     asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>,
-    navigate?: (to: To, options?: NavigateOptions) => void
 ) {
 
     const rootReducer: ReducersMapObject = {
@@ -30,8 +29,7 @@ export function createReduxStore(
         middleware: getDefaultMiddleware => getDefaultMiddleware({
             thunk:{
                 extraArgument:{
-                    api: $api,
-                    navigate: navigate,
+                    api: $api
                 }
             }
         })

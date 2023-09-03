@@ -15,7 +15,8 @@ describe('fetchNextArticlesPage', () => {
                 entities: {},
                 page: 2,
                 limit: 5,
-                view: ArticlesView.LIST
+                view: ArticlesView.LIST,
+                _inited: false,
             }
         })
         await thunk.callThunk()
@@ -25,40 +26,42 @@ describe('fetchNextArticlesPage', () => {
         expect(fetchArticles).toHaveBeenCalledWith({ page: 3 })
     }),
 
-    test('not called', async() => {
+        test('not called', async () => {
 
-        const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
-            articlePage: {
-                isLoading: false,
-                hasMore: false,
-                ids: [],
-                entities: {},
-                page: 2,
-                limit: 5,
-                view: ArticlesView.LIST
-            }
-        });
+            const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
+                articlePage: {
+                    isLoading: false,
+                    hasMore: false,
+                    ids: [],
+                    entities: {},
+                    page: 2,
+                    limit: 5,
+                    view: ArticlesView.LIST,
+                    _inited: false,
+                }
+            });
 
-        await thunk.callThunk();
-        expect(thunk.dispatch).toBeCalledTimes(2);
-        expect(fetchArticles).not.toHaveBeenCalled();
-    }),
+            await thunk.callThunk();
+            expect(thunk.dispatch).toBeCalledTimes(2);
+            expect(fetchArticles).not.toHaveBeenCalled();
+        }),
 
-    test('isLoading', async()=> {
-        const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
-            articlePage: {
-                isLoading: true,
-                hasMore: true,
-                ids: [],
-                entities: {},
-                page: 2,
-                limit: 5,
-                view: ArticlesView.LIST
-            }
+        test('isLoading', async () => {
+            const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
+                articlePage: {
+                    isLoading: true,
+                    hasMore: true,
+                    ids: [],
+                    entities: {},
+                    page: 2,
+                    limit: 5,
+                    view: ArticlesView.LIST,
+                    _inited: false,
+                }
+            })
+            await thunk.callThunk()
+
+            expect(thunk.dispatch).toBeCalledTimes(2);
+            expect(fetchArticles).not.toHaveBeenCalled()
         })
-        await thunk.callThunk()
-
-        expect(thunk.dispatch).toBeCalledTimes(2);
-        expect(fetchArticles).not.toHaveBeenCalled()
-    })
 })
