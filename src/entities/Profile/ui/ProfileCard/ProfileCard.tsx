@@ -11,7 +11,7 @@ import { CurrencySelect } from 'entities/Currency/ui/CurrencySelect/CurrencySele
 import { Currency } from 'entities/Currency';
 import { CountrySelect } from 'entities/Country';
 import { Country } from 'entities/Country/model/types/countrySelect';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 
 
 

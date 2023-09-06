@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'app/providers/StoreProvider';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
 import { getArticlePageIsLoading, getArticlePageView } from '../../model/selectors/getArticlePageState/ArticleViewSelector';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from '../../model/service/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlePage } from '../../model/service/initArticlePage/initArticlePage';
 

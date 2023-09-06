@@ -19,7 +19,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileData } from '../model/types/profile';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 
