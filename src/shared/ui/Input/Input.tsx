@@ -11,7 +11,7 @@ interface InputProps extends HTMLIputProps {
     value?: string | number,
     onChange?: (value: string) => void,
     autofocus?: boolean,
-    placeholder?: string | undefined 
+    placeholder: string,
     readonly?: boolean,
 }
 

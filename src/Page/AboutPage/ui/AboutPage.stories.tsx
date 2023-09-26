@@ -8,7 +8,7 @@ import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterD
 export default {
   title: "Page/AboutPage",
   component: AboutPage,
-  decorators: [ThemeDecorator(Theme.NORMAL),RouterDecorator],
+  decorators: [ThemeDecorator(Theme.NORMAL), RouterDecorator],
   argTypes: {
     backgroundColor: { control: "color" },
   },

@@ -3,6 +3,7 @@ import { TestAsyncThunk } from "shared/lib/TestAsuncThunk/TestAsuncThunk"
 import { initArticlePage } from "./initArticlePage"
 import { ArticlesView } from "entities/Article"
 import { fetchArticles } from "../fetchArticles/fetchArticles"
+import { ArticleSortField, ArticleType } from "entities/Article/model/types/article"
 
 jest.mock('../fetchArticles/fetchArticles')
 
@@ -17,10 +18,14 @@ describe('initArticlePage', () => {
                 page: 2,
                 limit: 5,
                 view: ArticlesView.LIST,
+                sort: ArticleSortField.CREATED,
+                search: '',
+                order: 'asc',
                 _inited: true,
+                type: ArticleType.ALL
             }
         });
-        await thunk.callThunk()
+        await thunk.callThunk({} as URLSearchParams)
 
         expect(fetchArticles).not.toBeCalled()
     })
@@ -35,10 +40,14 @@ describe('initArticlePage', () => {
                 page: 2,
                 limit: 5,
                 view: ArticlesView.LIST,
+                sort: ArticleSortField.CREATED,
+                search: '',
+                order: 'asc',
                 _inited: false,
+                type: ArticleType.ALL
             }
         });
-        await thunk.callThunk()
+        await thunk.callThunk({} as URLSearchParams)
 
         expect(fetchArticles).toHaveBeenCalled()
         expect(thunk.dispatch).toHaveBeenCalledTimes(4)

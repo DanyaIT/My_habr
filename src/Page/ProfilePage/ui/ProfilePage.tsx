@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect } from 'react'
+import { FC, useCallback, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'app/providers/StoreProvider';
@@ -49,12 +49,14 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
         [ValidateProfileData.INCORRECT_SERVER]: t('Ошибка на стороне сервера'),
         [ValidateProfileData.INCORRECT_USER_DATA]: t('Укажите верное имя и фамилию'),
     }
+    const ref = useRef()
 
 
     useInitialEffect(() => {
         if (id) {
             dispatch(fetchProfileData(id))
         }
+
     })
 
     const onChangeFirstName = useCallback((value?: string) => {

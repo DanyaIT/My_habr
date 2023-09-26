@@ -108,7 +108,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
                <Icon className={cls.Icon}
                   Svg={EyeImage} />
                <Text
-                  text={String(data?.views)}
+                  text={String(data?.view)}
                />
             </div>
             <div className={cls.ArticleInfo}>

@@ -11,6 +11,7 @@ export {ArticleCodeBlockComponent} from './ui/ArticleCodeBlockComponent/ArticleC
 export {ArticleTextBlockComponent} from './ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 export {ArticleImageBlockComponent} from './ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 export {ArticleList} from './ui/ArticleList/ArticleList';
+export {ArticleType} from './model/types/article'
 
 export {getArticleDetailsData} from './model/selectors/getArticleDetailsData/getArticleDetailsData';
 export {getArticleDetailsError} from './model/selectors/getArticleDetailsError/getArticleDetailsError';

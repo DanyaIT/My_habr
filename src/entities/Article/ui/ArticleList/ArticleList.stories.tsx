@@ -12,7 +12,7 @@ const article =
    title: "Javascript news Javascript news Javascript news Javascript news",
    subtitle: "Что нового в JS за 2023 год?",
    img: "https://i.pinimg.com/originals/5e/08/f5/5e08f5cd8c99a350852966820bca894f.jpg",
-   views: 1022,
+   view: 1022,
    user: {
     id: '1',
     username: 'Danya',

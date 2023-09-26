@@ -12,7 +12,7 @@ describe('getArticleDetailsData', () => {
             "title": "Javascript news",
             "subtitle": "Что нового в JS за 2023 год?",
             "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-            "views": 1022,
+            "view": 1022,
             "user": {"username": "Danya", "id":"1"},
             "createdAt": "26.07.2023",
             "type": [ArticleType.IT],
@@ -77,6 +77,7 @@ describe('getArticleDetailsData', () => {
                }
             ]
          }
+
          const state:DeepPartial<StateSchema> = {
             articleDetails: {
                 data

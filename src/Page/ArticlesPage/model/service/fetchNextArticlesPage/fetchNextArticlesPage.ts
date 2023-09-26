@@ -18,10 +18,8 @@ export const fetchNextArticlesPage = createAsyncThunk<void, void, ThunkConfig<st
         const hasMore = getArticlePageHasMore(getState())
 
         if(hasMore && !isLoading){
+            dispatch(fetchArticles({}))
             dispatch(articlePageAction.setPage(page + 1))
-            dispatch(fetchArticles({
-                page: page + 1
-            }))
         }
          
     }
