@@ -5,17 +5,37 @@
 @import 'themes/blue.scss';
 
 
-body{
+body {
     font: var(--font-m);
     color: var(--primary-color);
 }
 
-.app{
+.app {
     background: var(--bg-color);
     min-height: 100vh;
     color: var(--primary-color);
 }
 
-.content-page{
-    display: flex;   
+.content-page {
+    display: flex;
+}
+
+
+*::-webkit-scrollbar {
+    width: 15px;
+    /* в основном для вертикальных полос прокрутки */
+    height: 10px;
+    /* в основном для горизонтальных полос прокрутки */
+}
+
+*::-webkit-scrollbar-thumb {
+    /* плашка-бегунок */
+    background: var(--inverted-secondary-color);
+    border-radius: 15px;
+    border: 2px solid var(--secondary-color);
+}
+
+*::-webkit-scrollbar-track {
+    /* фон */
+    background: var(--card-bg);
 }

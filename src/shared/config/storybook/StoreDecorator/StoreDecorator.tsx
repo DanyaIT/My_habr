@@ -1,6 +1,7 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { StoryFn } from '@storybook/react';
-import { articleDetailsCommentReducer } from 'Page/ArticlesDetailsPage';
+import { articleDetailsPageReducer } from 'Page/ArticlesDetailsPage';
+
 import { profileReducer } from 'Page/ProfilePage';
 import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
 import { articleDetailsReducer } from 'entities/Article';
@@ -14,7 +15,7 @@ const defaultAsyncReducers:ReducersList = {
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsCommentReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 }
 
 export const StoreDecorator = (

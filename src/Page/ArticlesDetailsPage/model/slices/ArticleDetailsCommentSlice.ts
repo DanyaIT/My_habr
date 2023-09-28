@@ -5,7 +5,7 @@ import {
   } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment'
-import { ArticleDetailsCommentSchema } from '../types/ArticleDetailsCommentSchema';
+import { ArticleDetailsPageCommentSchema } from '../types/ArticleDetailsPageCommentSchema';
 import { fetchCommentsByArticleId } from 'Page/ArticlesDetailsPage';
 
   
@@ -15,13 +15,13 @@ import { fetchCommentsByArticleId } from 'Page/ArticlesDetailsPage';
   
 
   export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments || commentsAdapter.getInitialState()
+    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
   )
 
   
   const articleDetailsCommentSlice = createSlice({
     name: 'ArticleDetailsCommentSlice',
-    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentSchema>({
+    initialState: commentsAdapter.getInitialState<ArticleDetailsPageCommentSchema>({
         isLoading: false,
         error: undefined,
         ids: [],
@@ -48,4 +48,4 @@ import { fetchCommentsByArticleId } from 'Page/ArticlesDetailsPage';
     
   })
 
-export const {reducer: articleDetailsCommentReducer} = articleDetailsCommentSlice
+export const {reducer: articleDetailsPageCommentReducer} = articleDetailsCommentSlice

@@ -1,14 +1,14 @@
 import { DeepPartial } from "@reduxjs/toolkit"
-import { ArticleDetailsCommentSchema } from "../types/ArticleDetailsCommentSchema"
-import {articleDetailsCommentReducer } from "./ArticleDetailsCommentSlice"
+import { ArticleDetailsPageCommentSchema } from "../types/ArticleDetailsPageCommentSchema"
+import {articleDetailsPageCommentReducer } from "./ArticleDetailsCommentSlice"
 import { fetchCommentsByArticleId } from "../services/fetchCommentsByArticleId/fetchCommentsByArticleId"
 
 describe('articleDetailsCommentSlice', () => {
     test('fetchCommentsByArticleId.pending', () => {
-        const state: DeepPartial<ArticleDetailsCommentSchema> = {
+        const state: DeepPartial<ArticleDetailsPageCommentSchema> = {
             isLoading:false,
         }
-        expect(articleDetailsCommentReducer(state as ArticleDetailsCommentSchema, 
+        expect(articleDetailsPageCommentReducer(state as ArticleDetailsPageCommentSchema, 
             fetchCommentsByArticleId.pending)).toEqual({isLoading: true})
        
     })

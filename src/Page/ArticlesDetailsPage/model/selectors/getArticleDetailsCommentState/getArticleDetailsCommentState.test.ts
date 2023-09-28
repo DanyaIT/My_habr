@@ -1,3 +1,5 @@
+import { articleDetailsPageReducer } from './../../slices/index';
+import { articleDetailsPageCommentReducer } from 'Page/ArticlesDetailsPage';
 import { DeepPartial } from "@reduxjs/toolkit"
 import { StateSchema } from "app/providers/StoreProvider"
 import { getArticleDetailsCommentError, getArticleDetailsCommentIsloading } from "./getArticleDetailsCommentState"
@@ -6,20 +8,33 @@ import { getArticleDetailsCommentError, getArticleDetailsCommentIsloading } from
 describe('getArticleDetailsCommentIsloading', () => {
     test('With State', () => {
         const state: DeepPartial<StateSchema> = {
-            articleDetailsComments:{
-                isLoading: true,
-                ids: [],
-                entities: {},
+            articleDetailsPage:{
+                comments: {
+                    isLoading: true,
+                    ids: [],
+                    entities: {},
+                },
+                recomendations:{
+                    ids: [],
+                    entities: {},
+                }
             }
+            
         }
         expect(getArticleDetailsCommentIsloading(state as StateSchema)).toEqual(true)
     })
 
     test('With empty state', () => {
         const state: DeepPartial<StateSchema> = {
-            articleDetailsComments:{
-                ids: [],
-                entities: {},
+            articleDetailsPage:{
+                comments:{
+                    ids: [],
+                    entities: {},
+                },
+                recomendations:{
+                    ids: [],
+                    entities: {},
+                }
             }
         }
         expect(getArticleDetailsCommentIsloading(state as StateSchema)).toEqual(undefined)
@@ -30,10 +45,16 @@ describe('getArticleDetailsCommentIsloading', () => {
 describe('getArticleDetailsCommentError', () => {
     test('With State', () => {
         const state: DeepPartial<StateSchema> = {
-            articleDetailsComments:{
-                error: 'error',
-                ids: [],
-                entities: {},
+            articleDetailsPage:{
+                comments:{
+                    error: 'error',
+                    ids: [],
+                    entities: {},
+                },
+                recomendations:{
+                    ids: [],
+                    entities: {},
+                }
             }
         }
         expect(getArticleDetailsCommentError(state as StateSchema)).toEqual('error')
@@ -41,9 +62,15 @@ describe('getArticleDetailsCommentError', () => {
 
     test('With empty state', () => {
         const state: DeepPartial<StateSchema> = {
-            articleDetailsComments:{
-                ids: [],
-                entities: {},
+            articleDetailsPage:{
+                comments: {
+                    ids: [],
+                    entities: {},
+                },
+                recomendations:{
+                    ids: [],
+                    entities: {},
+                }
             }
         }
         expect(getArticleDetailsCommentError(state as StateSchema)).toEqual(undefined)

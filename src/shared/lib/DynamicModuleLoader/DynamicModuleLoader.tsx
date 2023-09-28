@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import {useStore } from 'react-redux'
 import { ReduxStoreWithManager, useAppDispatch } from 'app/providers/StoreProvider'
 import { Reducer } from '@reduxjs/toolkit'
-import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema'
+import { StateSchema, StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema'
 
 
 export type ReducersList = {
