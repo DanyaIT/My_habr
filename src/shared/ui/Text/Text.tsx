@@ -33,7 +33,7 @@ export const Text = memo((props:TextProps) => {
         className,
         text,
         theme = TextTheme.PRIMARY,
-        title,
+        title = '',
         align = AlignText.LEFT,
         size = TextSize.L,
     } = props

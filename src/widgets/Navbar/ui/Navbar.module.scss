@@ -9,9 +9,21 @@
 }
 
 .links{
-    margin-left: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 20px;
 }
 
 .mainLink{
     margin-right: 15px;
+}
+
+.Title p{
+    width: calc(var(--sidebar-width) - 20px);
+    margin: 0px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

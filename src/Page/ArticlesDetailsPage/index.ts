@@ -7,3 +7,4 @@ export {fetchCommentsByArticleId} from './model/services/fetchCommentsByArticleI
 export {addCommentForArticle} from './model/services/addCommentForArticle/addCommentForArticle'
 export {ArtilceDetailsPageRecomendationShema} from './model/types/ArtilceDetailsPageRecomendationShema'
 export {articleDetailsPageReducer} from './model/slices/index'
+export {getCanEditArticle} from './model/selectors/getCanEditArticle/getCanEditArticle'

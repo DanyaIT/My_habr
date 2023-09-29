@@ -26,6 +26,7 @@ import {
 } from '../../model/slices/ArticleDetailsPageRecomendationSlice';
 import { getArticleDetailsRecomendationsIsLoading } from 'Page/ArticlesDetailsPage/model/selectors/getArticleDetailsRecomendationsState/getArticleDetailsRecomendationsState';
 import { fetchArticlesRecomendations } from 'Page/ArticlesDetailsPage/model/services/fetchArticlesRecomendations/fetchArticlesRecomendations';
+import { ArticlesDetailsPageHeader } from '../ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
 
 interface ArticlesDetailsPageProps {
    className?: string;
@@ -73,9 +74,7 @@ const ArticlesDetailsPage: FC<ArticlesDetailsPageProps> = memo((props) => {
    return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
          <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
-            <Button onClick={onBackToList}>
-               {t('Назад к списку статей')}
-            </Button>
+            <ArticlesDetailsPageHeader/>
             <ArticleDetails id={id} />
             <Text 
             size={TextSize.L}
