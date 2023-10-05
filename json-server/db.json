@@ -8,7 +8,7 @@
       "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
     },
     {
-      "id": "2", 
+      "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
@@ -800,13 +800,13 @@
   "profile": [
     {
       "id": "1",
-      "first": "danya",
+      "first": "Danya",
       "lastname": "Ocheretin",
       "age": 24,
       "currency": "USD",
       "contry": "Russia",
       "city": "Moscow",
-      "username": "Overl",
+      "username": "",
       "avatar": "https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg",
       "country": "Belarus"
     },

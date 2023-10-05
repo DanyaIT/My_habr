@@ -16,6 +16,8 @@ interface PageProps {
    children: ReactNode;
 }
 
+export const PAGE_ID = 'PAGE__ID'
+
 export const Page: FC<PageProps> = (props) => {
    const { className, children, onScrollEnd } = props;
    const { t } = useTranslation()
@@ -45,11 +47,12 @@ export const Page: FC<PageProps> = (props) => {
 
    return (
 
-      <section ref={wrapperRef} className={classNames(cls.Page, {}, [className])}
+      <main ref={wrapperRef} className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      id = {PAGE_ID}
       >
          {children}
          <div className={cls.DIv} ref={triggerRef} />
-      </section>
+      </main>
    );
 }

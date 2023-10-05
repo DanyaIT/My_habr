@@ -1,9 +1,10 @@
 
 import { TestAsyncThunk } from "shared/lib/TestAsuncThunk/TestAsuncThunk"
 import { initArticlePage } from "./initArticlePage"
-import { ArticlesView } from "entities/Article"
+import { ArticlesView, getArticleDetailsData } from "entities/Article"
 import { fetchArticles } from "../fetchArticles/fetchArticles"
 import { ArticleSortField, ArticleType } from "entities/Article/model/types/article"
+import { useSelector } from "react-redux"
 
 jest.mock('../fetchArticles/fetchArticles')
 
@@ -47,6 +48,8 @@ describe('initArticlePage', () => {
                 type: ArticleType.ALL
             }
         });
+
+        
         await thunk.callThunk({} as URLSearchParams)
 
         expect(fetchArticles).toHaveBeenCalled()

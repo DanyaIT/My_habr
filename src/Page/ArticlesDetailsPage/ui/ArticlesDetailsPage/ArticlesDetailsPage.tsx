@@ -2,7 +2,7 @@ import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesDetailsPage.module.scss';
-import { ArticleDetails, ArticleList } from 'entities/Article';
+import { ArticleDetails, ArticleList, getArticleDetailsData } from 'entities/Article';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
@@ -53,15 +53,10 @@ const ArticlesDetailsPage: FC<ArticlesDetailsPageProps> = memo((props) => {
    }, [dispatch])
 
 
-   const onBackToList = useCallback(() => {
-      navigate(RoutePath.articles)
-   }, [navigate])
-
    useInitialEffect(() => {
       dispatch(fetchCommentsByArticleId(id))
       dispatch(fetchArticlesRecomendations())
    })
-
 
    if (!id) {
       return (

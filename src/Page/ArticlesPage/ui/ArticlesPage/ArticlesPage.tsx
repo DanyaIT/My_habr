@@ -2,7 +2,7 @@ import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { ArticleList } from 'entities/Article';
+import { ArticleList, getArticleDetailsData } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 import { articlePageReducer, getArticle } from '../../model/slice/ArticlePageSlice';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -40,7 +40,6 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   useInitialEffect(() => {
    dispatch(initArticlePage(searchParams))
   })
-
 
 return (
   <DynamicModuleLoader reducers={reducers} removeAfterUnmount = {false}>

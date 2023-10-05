@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import { SideBarItems } from "../SideBarItems/SideBarItems";
 import { useSelector } from "react-redux";
 import { getSideBarItems } from "../model/selectors/getSideBarItems/getSideBarItems";
+import { VStack } from "shared/ui/Stack";
+
 
 
 interface SideBarProps {
@@ -31,15 +33,18 @@ export const SideBar = memo(({ className }:SideBarProps) => {
   )), [collapsed, sideBarItemsTypeList])
 
   return (
-    <menu
+    <aside
       className={classNames(cls.SideBar, { [cls.collapsed]: collapsed }, [
         className || "",
       ])}
       data-testid="sidebar"
     >
-      <div className={cls.items}>
+      <VStack
+      role="navigation" 
+      gap="8" 
+      className={cls.items}>
           {itemsList}
-      </div>
+      </VStack>
 
       <Button
         theme={ThemeButton.BACKGROUND_INVERTED}
@@ -55,6 +60,6 @@ export const SideBar = memo(({ className }:SideBarProps) => {
         <ThemeSwitcher />
         <LangSwitcher className={cls.lang} short={collapsed} />
       </div>
-    </menu>
+    </aside>
   );
 });

@@ -1,5 +1,5 @@
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Text, TextTheme} from "./Text";
+import { Text, TextSize, TextTheme} from "./Text";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 
@@ -56,3 +56,27 @@ OnlyTextDark.args = {
     text :'Text for MainPage'
 }
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+
+export const TitleSize_S = Template.bind({});
+TitleSize_S.args = {
+    size: TextSize.S,
+    title: 'Text for MainPage',
+    text:'Text for MainPage'
+}
+
+export const TitleSize_M = Template.bind({});
+TitleSize_M.args = {
+    size: TextSize.M,
+    title: 'Text for MainPage',
+    text:'Text for MainPage'
+}
+
+export const TitleSize_L = Template.bind({});
+TitleSize_L.args = {
+    size: TextSize.L,
+    title: 'Text for MainPage',
+    text:'Text for MainPage'
+}
+
+

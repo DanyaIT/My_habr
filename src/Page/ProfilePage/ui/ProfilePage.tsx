@@ -21,6 +21,8 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useParams } from 'react-router-dom';
 import { Page } from 'widgets/Page/Page';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { VStack } from 'shared/ui/Stack';
+
 
 
 
@@ -49,8 +51,6 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
         [ValidateProfileData.INCORRECT_SERVER]: t('Ошибка на стороне сервера'),
         [ValidateProfileData.INCORRECT_USER_DATA]: t('Укажите верное имя и фамилию'),
     }
-    const ref = useRef()
-
 
     useInitialEffect(() => {
         if (id) {
@@ -98,6 +98,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     return (
         <DynamicModuleLoader reducers={reducers}>
             <Page className={classNames('', {}, [className])}>
+                <VStack gap='16' max>
                 <ProfilePageHeader />
                 {validateData &&
                     validateData.map(item => (
@@ -122,7 +123,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
                     onChangeCountry={onChangeCountry}
                     readonly={readonly}
                 />
-
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     )
