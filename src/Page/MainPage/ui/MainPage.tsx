@@ -2,20 +2,23 @@ import { BugButton } from 'app/providers/ErrorBoundary'
 import { useTranslation } from 'react-i18next'
 import { Page } from 'widgets/Page/Page'
 import { Text } from 'shared/ui/Text/Text'
-import { useSelector } from 'react-redux'
-import { getArticleDetailsData } from 'entities/Article'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { VStack } from 'shared/ui/Stack'
 
 const MainPage = () => {
 
   const { t } = useTranslation('main')
 
   return (
-    <Page>{t('Главная страница')}
+    <Page>
+      <VStack>
+      {t('Главная страница')}
       <BugButton />
       <Text
         text='Text for MainPage'
         title='Title for MainPage'
       />
+      </VStack>
     </Page>
 
   )
