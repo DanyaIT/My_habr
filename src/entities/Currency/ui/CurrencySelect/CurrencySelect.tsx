@@ -37,7 +37,7 @@ export const CurrencySelect: FC<CurrencySelectProps> = memo(({ className, onChan
                 onChange={onChangeHandler}
                 value={value}
                 readonly = {readonly}
-                direction='top'
+                direction='top right'
             />
 
                 {/* <Select

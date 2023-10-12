@@ -1,0 +1,62 @@
+.Dropdown {
+    position: relative;
+}
+
+.Btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Items {
+    z-index: 10;
+    position: absolute;
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.Item {
+    padding: 5px 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--card-bg);
+    border-radius: 15px
+}
+
+
+.Active{
+    background-color: var(--inverted-primary-color);
+    border-radius: 15px;
+}
+
+.Disabled{
+    opacity: .5;
+    cursor:not-allowed;
+}
+
+.DropDownLeft {
+    top: 100%;
+    right: 0;
+}
+
+.DropDownRight {
+    top: 100%;
+    left: 0;
+}
+
+.DropUpLeft{
+    bottom: 100%;
+    right: 0;
+}
+
+.DropUpRight {
+    bottom: 100%;
+    left: 0;
+}

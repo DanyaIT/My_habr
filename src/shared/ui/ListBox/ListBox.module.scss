@@ -28,6 +28,23 @@
     opacity: .7;
 }
 
-.DropUp{
+
+.DropDownLeft {
+    top: 100%;
+    right: 0;
+}
+
+.DropDownRight {
+    top: 100%;
+    left: 0;
+}
+
+.DropUpLeft{
     bottom: 100%;
+    right: 0;
+}
+
+.DropUpRight {
+    bottom: 100%;
+    left: 0;
 }
