@@ -1,20 +1,20 @@
 
-import { ArticlesDetailsPageHeader } from './ArticlesDetailsPageHeader';
+import { ArticleDetailsRecomendationsList } from './ArticleDetailsRecomendationsList';
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 
 
 export default {
-   title: 'Page/ArticlesDetailsPageHeader',
-   component: ArticlesDetailsPageHeader,
+   title: 'features/ArticleDetailsRecomendationsList',
+   component: ArticleDetailsRecomendationsList,
    decorators: [ThemeDecorator(Theme.NORMAL)],
    argTypes: {
       backgroundColor: { control: 'color' },
    },
-} as Meta<typeof ArticlesDetailsPageHeader>;
+} as Meta<typeof ArticleDetailsRecomendationsList>;
 
-const Template: StoryFn <typeof ArticlesDetailsPageHeader> = (args) => <ArticlesDetailsPageHeader {...args}/>
+const Template: StoryFn <typeof ArticleDetailsRecomendationsList> = (args) => <ArticleDetailsRecomendationsList {...args}/>
 
 export const Normal = Template.bind({});
 Normal.args = {

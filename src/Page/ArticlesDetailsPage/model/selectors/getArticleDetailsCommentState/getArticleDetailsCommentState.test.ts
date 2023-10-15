@@ -1,5 +1,4 @@
-import { articleDetailsPageReducer } from './../../slices/index';
-import { articleDetailsPageCommentReducer } from 'Page/ArticlesDetailsPage';
+
 import { DeepPartial } from "@reduxjs/toolkit"
 import { StateSchema } from "app/providers/StoreProvider"
 import { getArticleDetailsCommentError, getArticleDetailsCommentIsloading } from "./getArticleDetailsCommentState"

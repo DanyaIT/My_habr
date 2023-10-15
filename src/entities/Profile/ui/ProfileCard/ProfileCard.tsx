@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import cls from './ProfileCard.module.scss'
 import { AlignText, Text, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
-import { Profile } from 'Page/ProfilePage';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { CurrencySelect } from 'entities/Currency/ui/CurrencySelect/CurrencySelect';
@@ -13,6 +12,7 @@ import { CountrySelect } from 'entities/Country';
 import { Country } from 'entities/Country/model/types/countrySelect';
 import { Page } from 'widgets/Page/Page';
 import { HStack, VStack } from 'shared/ui/Stack';
+import { Profile } from 'features/EditableProfileCard/model/types/profile';
 
 
 

@@ -1,7 +1,7 @@
 import { DeepPartial } from "@reduxjs/toolkit"
+import { ArticleDetailsShema } from "../types/articleDetailsShema"
 import { articleDetailsReducer } from "./ArticleDetailsSlice"
 import { fetchArticleById } from "../services/fetchArticleById/fetchArticleById"
-import { ArticleDetailsShema } from "../types/articleDetailsShema"
 import { Article, ArticleBlockBlockType, ArticleType } from "../types/article"
 
 const data: Article = {

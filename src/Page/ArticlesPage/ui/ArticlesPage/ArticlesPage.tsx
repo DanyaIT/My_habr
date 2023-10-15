@@ -14,6 +14,7 @@ import { fetchNextArticlesPage } from '../../model/service/fetchNextArticlesPage
 import { initArticlePage } from '../../model/service/initArticlePage/initArticlePage';
 import { ArticlePageFilter } from '../ArticlePageFilter/ArticlePageFilter';
 import { useSearchParams } from 'react-router-dom';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ArticlesPageProps {
   className?: string;
@@ -25,11 +26,7 @@ const reducers: ReducersList = {
 
 const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const { className } = props;
-  const { t } = useTranslation('/articles')
   const dispatch = useAppDispatch()
-  const articles = useSelector(getArticle.selectAll)
-  const view = useSelector(getArticlePageView)
-  const isLoading = useSelector(getArticlePageIsLoading)
   const [searchParams] = useSearchParams();
   
 
@@ -47,10 +44,7 @@ return (
       onScrollEnd={onLoadNextPage}
       className={classNames(cls.ArticlesPage, {}, [className])}>
       <ArticlePageFilter className={cls.ArticlePageFilter}/>
-      <ArticleList
-        view={view}
-        articles={articles}
-        isLoading = {isLoading}/>
+      <ArticleInfiniteList/>
     </Page>
   </DynamicModuleLoader>
 );

@@ -795,20 +795,38 @@
       "text": "Комментарий ",
       "userId": "1",
       "id": "4lOcjV9"
+    },
+    {
+      "articleId": "6",
+      "text": "123",
+      "userId": "1",
+      "id": "vut4NJK"
+    },
+    {
+      "articleId": "6",
+      "text": "21",
+      "userId": "1",
+      "id": "_hOCT1O"
+    },
+    {
+      "articleId": "6",
+      "text": "21343",
+      "userId": "1",
+      "id": "8SyWbpC"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "Danya",
+      "first": "Daniil",
       "lastname": "Ocheretin",
       "age": 24,
-      "currency": "USD",
+      "currency": "RUB",
       "contry": "Russia",
       "city": "Moscow",
       "username": "",
       "avatar": "https://adiariocr.com/wp-content/uploads/2018/06/Cibercrimen4.jpg",
-      "country": "Russia"
+      "country": "Ukraine"
     },
     {
       "id": "2",
