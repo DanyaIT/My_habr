@@ -15,16 +15,18 @@ export const ArticleDetailsRecomendationsList: FC<ArticleDetailsRecomendationsLi
    const { className } = props;
    const { t } = useTranslation()
 
-   const {isLoading, error, data:articles} = useArticleRecommendationsList(10);
+   const {isLoading, error, data:articles} = useArticleRecommendationsList(5);
 
-   if(isLoading || error){
+   if(isLoading || error || !articles){
       return null
    }
    
    return (
       <VStack 
+      align='center'
       gap='16'
-      className={classNames(cls.ArticleDetailsRecomendationsList, {}, [className])}>
+      className={classNames(cls.ArticleDetailsRecomendationsList, {}, [className])}
+      >
             <Text
             size={TextSize.L}
             title = {t('Рекомендуем') || ''}

@@ -12,7 +12,7 @@ export const fetchArticlesRecomendations = createAsyncThunk<Article[], void, Thu
          
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {
-                    _limit: 5,
+                    _limit: 4,
                 }
             })
 

@@ -4,14 +4,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://image.coinpedia.org/wp-content/uploads/2020/02/27094028/Binance-CEO-CZ-Calls-Craig-Wright-Fraud-Citing-Fcoin-Exit-Scam.jpg"
     }
   ],

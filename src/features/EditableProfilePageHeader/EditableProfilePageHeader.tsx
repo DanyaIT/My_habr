@@ -10,69 +10,72 @@ import { getUserAuthData } from 'entities/User';
 import { getProfileData } from '../EditableProfileCard/model/selectors/getProfileData/getProfileData'
 import { profileAction } from '../EditableProfileCard/model/slice/ProfileSlice';
 import { updateProfileData } from '../EditableProfileCard/model/service/updateProfileData/updateProfileData';
-import {Text} from 'shared/ui/Text/Text';
+import { Text } from 'shared/ui/Text/Text';
 
 interface EditableProfilePageHeaderProps {
-   className?: string;
+    className?: string;
 }
 
 export const EditableProfilePageHeader: FC<EditableProfilePageHeaderProps> = memo((props) => {
-   const { className } = props;
-   const readOnly = useSelector(getProfileReadonly)
-   const { t } = useTranslation('profile')
-   const dispatch = useAppDispatch()
-   const authData = useSelector(getUserAuthData)
-   const profileData = useSelector(getProfileData)
-   
-   const canEdit = authData?.id === profileData?.id
+    const { className } = props;
+    const readOnly = useSelector(getProfileReadonly)
+    const { t } = useTranslation('profile')
+    const dispatch = useAppDispatch()
+    const authData = useSelector(getUserAuthData)
+    const profileData = useSelector(getProfileData)
 
-   const onEdit = useCallback(() => {
-       dispatch(profileAction.setReadonly(false))
-   }, [dispatch])
+    const canEdit = authData?.id === profileData?.id
 
-   const onCancelForm = useCallback(() => {
-       dispatch(profileAction.resetProfile())
-   }, [dispatch])
+    const onEdit = useCallback(() => {
+        dispatch(profileAction.setReadonly(false))
+    }, [dispatch])
 
-   
-   const onSaveForm = useCallback(() => {
-       dispatch(updateProfileData())
-   }, [dispatch])
+    const onCancelForm = useCallback(() => {
+        dispatch(profileAction.resetProfile())
+    }, [dispatch])
 
 
-   return (
-       <HStack
-       max
-       justify='between'
-       className={classNames('', {}, [className])}>
-           <Text title={t('Профиль') as string}></Text>
-           {canEdit && (
-               <HStack gap='8'>
-               {readOnly?
-                   (<Button
-                       theme={ThemeButton.OUTLINE}
-                       onClick={onEdit}
-                   >{t("Редактировать")}
-                   </Button>)
-                   : (
-                   <>
-                       <Button
-                           theme={ThemeButton.OUTLINE_RED}
-                           onClick={onCancelForm}
-                       >
-                           {t("Отменить")}</Button>
-                       <Button
-                           theme={ThemeButton.OUTLINE}
-                           onClick={onSaveForm}
-                       >
-                           {t("Сохранить")}
-                           </Button>
-                    </>)
-               }
-               </HStack>
-           )}
+    const onSaveForm = useCallback(() => {
+        dispatch(updateProfileData())
+    }, [dispatch])
 
-       </HStack>
 
-   )
+    return (
+        <HStack
+            max
+            justify='between'
+            className={classNames('', {}, [className])}>
+            <Text title={t('Профиль') as string}></Text>
+            {canEdit && (
+                <HStack gap='8'>
+                    {readOnly ?
+                        (<Button
+                            data-testid='EditableProfileCard.EditButton'
+                            theme={ThemeButton.OUTLINE}
+                            onClick={onEdit}
+                        >{t("Редактировать")}
+                        </Button>)
+                        : (
+                            <>
+                                <Button
+                                    data-testid = 'EditableProfileCard.CancelButton'
+                                    theme={ThemeButton.OUTLINE_RED}
+                                    onClick={onCancelForm}
+                                >
+                                    {t("Отменить")}</Button>
+                                <Button
+                                    data-testid = 'EditableProfileCard.SaveButton'
+                                    theme={ThemeButton.OUTLINE}
+                                    onClick={onSaveForm}
+                                >
+                                    {t("Сохранить")}
+                                </Button>
+                            </>)
+                    }
+                </HStack>
+            )}
+
+        </HStack>
+
+    )
 })

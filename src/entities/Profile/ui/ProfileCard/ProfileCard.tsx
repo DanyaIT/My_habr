@@ -73,6 +73,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
                 max
                 className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
                 <Text
+                    data-testid='ProfileCard.Error'
                     align={AlignText.CENTER}
                     theme={TextTheme.ERROR}
                     title={t("Произошла непредвиденная ошибка") as string}
@@ -106,6 +107,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
             )}
             <Input
                 className={cls.input}
+                data-testid = {'ProfileCard.firstName'}
                 placeholder={t("Укажите имя") as string}
                 value={data?.first}
                 onChange={onChangeFirstName}
@@ -113,6 +115,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
             />
             <Input
                 className={cls.input}
+                data-testid = {'ProfileCard.lastName'}
                 placeholder={t("Укажите фамилию") as string}
                 value={data?.lastname}
                 onChange={onChangeLastName}

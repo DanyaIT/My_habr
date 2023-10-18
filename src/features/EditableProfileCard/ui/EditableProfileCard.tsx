@@ -1,7 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './EditableProfileCard.module.scss';
 import { FC, memo, useCallback } from 'react'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'app/providers/StoreProvider';
@@ -99,7 +98,7 @@ export const EditableProfileCard: FC<EditableProfileCardProps> = memo((props) =>
    return (
       <DynamicModuleLoader reducers={reducers}>
       <VStack 
-      className={classNames(cls.EditableProfileCard, {}, [className])}
+      className={classNames('', {}, [className])}
       gap='16' 
       max
       >
@@ -107,6 +106,7 @@ export const EditableProfileCard: FC<EditableProfileCardProps> = memo((props) =>
       {validateData &&
             validateData.map(item => (
                <Text
+                  data-testid = 'EditableProfileCard.Error'
                   text={valodateProfileErrors[item]}
                   key={item}
                   theme={TextTheme.ERROR}

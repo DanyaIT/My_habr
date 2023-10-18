@@ -22,7 +22,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
       isLoading,
       articles,
       view = ArticlesView.PLATE,
-      target
+      target,
    } = props;
 
    const renderArticles = (article: Article) => {

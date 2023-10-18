@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { FC, memo, useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserAuthData, userActions } from 'entities/User';
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import {Text} from '../../../shared/ui/Text/Text'
@@ -25,6 +25,10 @@ export const Navbar = memo((props: NavbarProps) => {
   const {t} = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false)
   const isAuthData = useSelector(getUserAuthData)
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
+
+  const isAdminPanelAvailable = isManager || isAdmin;
   
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false)
@@ -55,6 +59,11 @@ export const Navbar = memo((props: NavbarProps) => {
       className={cls.DropDown}
       direction='bottom left'
       items={[
+        ...(isAdminPanelAvailable ? [{
+          content: t('Админ панель'),
+          href: RoutePath.admin_panel,
+        }] : []),
+
         {
         content: t('Выйти'), 
         onClick: onLogout
@@ -62,7 +71,7 @@ export const Navbar = memo((props: NavbarProps) => {
         {
           content: t('Профиль'),
           href: RoutePath.profile + isAuthData.id
-        }
+        },
       ]}
       trigger = {<Avatar size={40} src={isAuthData.avatar} circle/>}
       />
