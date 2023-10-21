@@ -3,13 +3,14 @@ import { Flex } from './Flex';
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { StoryFn, Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import { StoreProvider } from 'app/providers/StoreProvider';
+
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 
 export default {
    title: 'shared/Flex',
    component: Flex,
-   decorators: [ThemeDecorator(Theme.NORMAL)],
+   decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator],
    argTypes: {
       backgroundColor: { control: 'color' },
    },

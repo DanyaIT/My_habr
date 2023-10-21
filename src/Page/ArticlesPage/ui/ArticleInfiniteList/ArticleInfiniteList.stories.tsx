@@ -9,7 +9,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 export default {
    title: 'Page/ArticleInfiniteList',
    component: ArticleInfiniteList,
-   decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator],
+   decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({})],
    argTypes: {
       backgroundColor: { control: 'color' },
    },

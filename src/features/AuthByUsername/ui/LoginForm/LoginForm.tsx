@@ -35,11 +35,11 @@ const LoginForm: FC<LoginFormProps> = (({ className, onSuccess }) => {
         loginForm: LoginReducer,
     }
 
-    const onChangeUsername = useCallback((value) => {
+    const onChangeUsername = useCallback((value: string) => {
         dispatch(LoginActions.setUsername(value))
     }, [dispatch])
 
-    const onChangePassword = useCallback((value) => {
+    const onChangePassword = useCallback((value: string) => {
         dispatch(LoginActions.setPassword(value))
     }, [dispatch])
 

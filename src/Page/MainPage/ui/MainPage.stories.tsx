@@ -4,11 +4,13 @@ import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import MainPage from "./MainPage";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
+
 
 export default {
   title: "Page/MainPage",
   component: MainPage,
-  decorators: [ThemeDecorator(Theme.NORMAL),RouterDecorator],
+  decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({}), RouterDecorator],
   argTypes: {
     backgroundColor: { control: "color" },
   },

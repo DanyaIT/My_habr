@@ -4,13 +4,13 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { StoreProvider } from 'app/providers/StoreProvider';
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator';
 
 
 export default {
    title: 'features/EditableProfilePageHeader',
    component: EditableProfilePageHeader,
-   decorators: [ThemeDecorator(Theme.NORMAL), StoreProvider],
+   decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({}), RouterDecorator],
    argTypes: {
       backgroundColor: { control: 'color' },
    },

@@ -11,7 +11,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 
 interface ArticlesDetailsPageCommentsProps {
    className?: string;
-   id: string;
+   id?: string;
 }
 
 export const ArticlesDetailsPageComments: FC<ArticlesDetailsPageCommentsProps> = memo((props) => {

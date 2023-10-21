@@ -14,7 +14,7 @@ export enum ArticlesView {
 
 export interface ArticleBlockBase {
     id: string,
-    type: ArticleBlockBlockType,
+    type: ArticleBlockType,
 
 }
 
@@ -32,7 +32,7 @@ export interface ArticleImageBlock extends ArticleBlockBase {
     src: string,
 }
 
-export enum ArticleBlockBlockType {
+export enum ArticleBlockType {
     TEXT = "TEXT",
     IMAGE = 'IMAGE',
     CODE = 'CODE',

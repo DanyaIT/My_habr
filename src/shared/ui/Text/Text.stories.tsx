@@ -2,12 +2,13 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Text, TextSize, TextTheme} from "./Text";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 
 export default {
   title: "shared/Text",
   component: Text,
-  decorators: [ThemeDecorator(Theme.NORMAL)],
+  decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({})],
   argTypes: {
     backgroundColor: { control: "color" },
   },

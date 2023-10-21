@@ -9,7 +9,7 @@ import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDeco
 export default {
   title: "Page/AboutPage",
   component: AboutPage,
-  decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator],
+  decorators: [ThemeDecorator(Theme.NORMAL), StoreDecorator({}), RouterDecorator],
   argTypes: {
     backgroundColor: { control: "color" },
   },

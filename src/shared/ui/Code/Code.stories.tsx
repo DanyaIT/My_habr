@@ -3,12 +3,14 @@ import { Code } from './Code';
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator';
 
 
 export default {
    title: 'shared/Code',
    component: Code,
-   decorators: [ThemeDecorator(Theme.NORMAL)],
+   decorators: [StoreDecorator({})],
    argTypes: {
       backgroundColor: { control: 'color' },
    },
@@ -18,7 +20,7 @@ const Template: StoryFn <typeof Code> = (args) => <Code {...args}/>
 
 export const Normal = Template.bind({});
 Normal.args = {
-   children: `
+   text: `
    import { Code } from './Code';
    import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
    import { StoryFn , Meta } from "@storybook/react";

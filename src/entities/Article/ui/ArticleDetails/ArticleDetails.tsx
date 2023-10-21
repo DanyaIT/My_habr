@@ -17,11 +17,11 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeImage from '../../../../shared/assets/icons/EyeImage.svg'
 import CalendarImage from '../../../../shared/assets/icons/CalendarImage.svg'
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleBlock, ArticleBlockBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
 
 interface ArticleDetailsProps {
    className?: string;
-   id: string,
+   id?: string,
 }
 
 const redusers: ReducersList = {
@@ -45,21 +45,21 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
 
    const renderBlocks = useCallback((block: ArticleBlock) => {
       switch (block.type) {
-         case ArticleBlockBlockType.CODE:
+         case ArticleBlockType.CODE:
             return <ArticleCodeBlockComponent 
             className={cls.Block} 
              //@ts-ignore
             block = {block}
             key={block.id}
             />
-         case ArticleBlockBlockType.TEXT:
+         case ArticleBlockType.TEXT:
             return <ArticleTextBlockComponent 
             className={cls.Block} 
             //@ts-ignore
             block = {block}
             key={block.id}
             />
-         case ArticleBlockBlockType.IMAGE:
+         case ArticleBlockType.IMAGE:
               //@ts-ignore
             return <ArticleImageBlockComponent 
             className={cls.Block} 

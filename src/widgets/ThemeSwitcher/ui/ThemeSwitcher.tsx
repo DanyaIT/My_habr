@@ -1,4 +1,4 @@
-import { FC, memo } from 'react'
+import { FC, ReactNode, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ThemeSwitcher.module.scss'
 import { useTheme, Theme } from 'app/providers/ThemeProvider';
@@ -24,7 +24,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = memo(({ className }) => {
 
   return (
     <Button theme = {ThemeButton.CLEAR} onClick={toggleTheme} className={classNames(cls.ThemeSwitcher, {}, [className || ''])}>
-      {iconType[theme]}
+      {iconType[theme] as ReactNode}
     </Button>
 
   )

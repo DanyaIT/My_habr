@@ -2,7 +2,7 @@ import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { ArticleList, getArticleDetailsData } from 'entities/Article';
+
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 import { articlePageReducer, getArticle } from '../../model/slice/ArticlePageSlice';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';

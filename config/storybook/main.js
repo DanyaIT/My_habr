@@ -4,7 +4,9 @@ const config = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    "@storybook/addon-interactios",
+    "storybook-addon-mock/register",
+  
   ],
   framework: {
     name: "@storybook/react-webpack5",

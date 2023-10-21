@@ -38,14 +38,6 @@ const ArticlesDetailsPage: FC<ArticlesDetailsPageProps> = memo((props) => {
       dispatch(fetchArticlesRecomendations())
    })
 
-   if (!id) {
-      return (
-         <div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
-            {t("Статья не найдена")}
-         </div>
-      )
-   }
-
    return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
          <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>

@@ -12,6 +12,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
         html: '',
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
+        locales: '',
+        buildLocales: '',
     };
     config.resolve?.modules?.push(paths.src)
     config.resolve?.extensions?.push('.ts', '.tsx')
@@ -33,7 +35,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
     config.plugins?.push(new DefinePlugin({
         __IS_DEV__ : JSON.stringify(true),
-        __API__ : JSON.stringify(''),
+        __API__ : JSON.stringify('http://testapi.ru'),
         __PROJECT__: JSON.stringify('storybook')
     }));
 

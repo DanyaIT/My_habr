@@ -7,6 +7,7 @@ import CopyPage from '../../assets/icons/CopyPage.svg'
 interface CodeProps {
    className?: string;
    text: string,
+   children?: string,
 }
 
 export const Code: FC<CodeProps> = (props) => {
