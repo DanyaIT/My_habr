@@ -4,7 +4,7 @@ import { ThunkConfig } from "app/providers/StoreProvider";
 import { articlePageAction } from '../../slice/ArticlePageSlice';
 import { fetchArticles } from '../fetchArticles/fetchArticles';
 import { SortOrder } from 'shared/types';
-import { ArticleSortField, ArticleType } from 'entities/Article/model/types/article';
+import { ArticleSortField, ArticleType } from 'entities/Article';
 
 
 

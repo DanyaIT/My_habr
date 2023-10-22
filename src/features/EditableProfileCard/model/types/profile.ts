@@ -1,18 +1,8 @@
-import { validateProfileData } from './../service/validateProfileData/validateProfileData';
 
 import { Country } from "entities/Country/model/types/countrySelect";
 import { Currency } from "entities/Currency";
+import { ValidateProfileData } from "../const/ValidateProfileData";
 
-
-export enum ValidateProfileData {
-    INCORRECT_USER_DATA = 'INCORRECT_USER_DATA',
-    INCORRECT_AGE = "INCORRECT_AGE",
-    INCORRECT_COUNTRY = "INCORRECT_COUNTRY",
-    INCORRECT_SERVER = 'INCORRECT_SERVER',
-    INCORRECT_DATA = 'INCORRECT_DATA',
-    INCORRECT_CITY = "INCORRECT_CITY"
-
-}
 
 export interface Profile {
     id?:string,

@@ -2,7 +2,6 @@ import { AnchorHTMLAttributes, FC, HTMLAttributeAnchorTarget, useCallback } from
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticlesView } from '../../model/types/article';
 import { Text } from 'shared/ui/Text/Text';
 import EyeImage from 'shared/assets/icons/EyeImage.svg'
 import { Icon } from 'shared/ui/Icon/Icon';
@@ -12,6 +11,8 @@ import { Button } from 'shared/ui/Button/Button';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { Article, ArticleBlockType, ArticlesView } from 'entities/Article';
+import { ArticleTextBlock } from 'entities/Article/model/types/article';
 
 
 interface ArticleListItemProps {

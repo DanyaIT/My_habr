@@ -1,10 +1,10 @@
 import { ArtilceDetailsPageRecomendationShema } from './model/types/ArtilceDetailsPageRecomendationShema';
 export {ArticlesDetailsPageAsync as ArticlesDetailsPage} from './ui/ArticlesDetailsPage/ArticlesDetailsPage.async'
-export {ArticleDetailsPageCommentSchema} from './model/types/ArticleDetailsPageCommentSchema'
+export type {ArticleDetailsPageCommentSchema} from './model/types/ArticleDetailsPageCommentSchema'
 export {getArticleComments, articleDetailsPageCommentReducer}  from './model/slices/ArticleDetailsCommentSlice'
 export {getArticleDetailsCommentIsloading, getArticleDetailsCommentError} from './model/selectors/getArticleDetailsCommentState/getArticleDetailsCommentState'
 export {fetchCommentsByArticleId} from './model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 export {addCommentForArticle} from './model/services/addCommentForArticle/addCommentForArticle'
-export {ArtilceDetailsPageRecomendationShema} from './model/types/ArtilceDetailsPageRecomendationShema'
+export type {ArtilceDetailsPageRecomendationShema} from './model/types/ArtilceDetailsPageRecomendationShema'
 export {articleDetailsPageReducer} from './model/slices/index'
 export {getCanEditArticle} from './model/selectors/getCanEditArticle/getCanEditArticle'

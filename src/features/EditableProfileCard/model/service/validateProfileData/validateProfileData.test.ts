@@ -1,8 +1,8 @@
 import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
-
+import { ValidateProfileData } from "../../const/ValidateProfileData"
 import { validateProfileData } from "./validateProfileData"
-import { ValidateProfileData } from "../../types/profile"
+
 
 const profileData = {
     first: "Danya",

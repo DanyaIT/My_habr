@@ -7,7 +7,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoade
 import { articleDetailsReducer } from 'entities/Article/model/slice/ArticleDetailsSlice';
 import { useAppDispatch } from 'app/providers/StoreProvider';
 import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import { getArticleDetailsError, getArticleDetailsLoading, getArticleDetailsData, ArticleCodeBlockComponent, ArticleTextBlockComponent, ArticleImageBlockComponent } from 'entities/Article';
+import { getArticleDetailsError, getArticleDetailsLoading, getArticleDetailsData, ArticleCodeBlockComponent, ArticleTextBlockComponent, ArticleImageBlockComponent, ArticleBlockType } from 'entities/Article';
 import { useSelector } from 'react-redux';
 
 import { AlignText, Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
@@ -17,7 +17,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeImage from '../../../../shared/assets/icons/EyeImage.svg'
 import CalendarImage from '../../../../shared/assets/icons/CalendarImage.svg'
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock } from 'entities/Article/model/types/article';
 
 interface ArticleDetailsProps {
    className?: string;

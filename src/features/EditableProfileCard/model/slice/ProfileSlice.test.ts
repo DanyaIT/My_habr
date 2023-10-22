@@ -1,10 +1,11 @@
 
 import { DeepPartial } from "@reduxjs/toolkit"
 import { profileAction, profileReducer } from "./ProfileSlice"
-import { ProfileShema, ValidateProfileData } from "../types/profile"
+import { ProfileShema } from "../types/profile"
 import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { updateProfileData } from "../service/updateProfileData/updateProfileData"
+import { ValidateProfileData } from "../const/ValidateProfileData"
 
 const profileData = {
     id:'1',
@@ -58,7 +59,7 @@ describe('ProfileSlice', () => {
             data: profileData,
             form: profileData,
             readonly: true,
-            valodateError: undefined
+            valodateError: undefined,
         })
     })
 

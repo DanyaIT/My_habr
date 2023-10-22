@@ -3,8 +3,9 @@ import { ArticleList } from './ArticleList';
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { StoryFn , Meta } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import { Article, ArticlesView } from 'entities/Article';
+import { Article} from 'entities/Article';
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator';
+import { ArticlesView } from '../../model/consts/articleConsts';
 
 const article =  
 {

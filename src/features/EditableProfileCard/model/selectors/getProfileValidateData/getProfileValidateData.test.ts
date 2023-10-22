@@ -1,7 +1,8 @@
 import { DeepPartial } from "@reduxjs/toolkit"
 import { StateSchema } from "app/providers/StoreProvider"
 import { getProfileValidateData } from "./getProfileValidateData"
-import { ValidateProfileData } from "../../types/profile"
+import { ValidateProfileData } from "../../const/ValidateProfileData"
+
 
 describe('getProfileValidateData', () => {
     test('With state', () => {

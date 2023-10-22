@@ -1,8 +1,7 @@
 import { DeepPartial } from "@reduxjs/toolkit"
-import { ArticleDetailsShema } from "../../types/articleDetailsShema"
-import { Article, ArticleBlockType, ArticleType } from "../../types/article"
 import { StateSchema } from "app/providers/StoreProvider"
 import { getArticleDetailsData } from "./getArticleDetailsData"
+import { Article, ArticleBlockType, ArticleType } from "entities/Article"
 
 
 describe('getArticleDetailsData', () => {

@@ -16,7 +16,8 @@
       //Приведенный выше пример предполагает, что версия >= 2.7 или новее TypeScript используется с новым esModuleInterop и 
       //allowSyntheticDefaultImports параметры компилятора в вашем файле tsconfig.json
       "esModuleInterop": true,
-      "allowSyntheticDefaultImports":true
+      "allowSyntheticDefaultImports":true,
+      "isolatedModules": true,
     },
     
     "ts-node": {
@@ -31,4 +32,5 @@
       "./src/**/*.ts",
       "./src/**/*.tsx", "src/shared/config/storybook/RouterDecorator", "src/features/AuthByUsername/model/services/loginByUsername", "src/features/AuthByUsername/model/selectors/getLoginUsername",
     ]
+
   }

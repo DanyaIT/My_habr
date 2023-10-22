@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticlesView } from '../../model/types/article';
 import { Card } from 'shared/ui/Card/Card';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { ArticlesView } from '../../model/consts/articleConsts';
 
 
 interface ArticleLostItemSkeletonProps {

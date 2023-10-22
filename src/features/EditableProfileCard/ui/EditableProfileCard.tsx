@@ -6,9 +6,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoade
 import { useAppDispatch } from 'app/providers/StoreProvider';
 import { ProfileCard, } from 'entities/Profile';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { VStack } from 'shared/ui/Stack';
-import { ValidateProfileData } from '../model/types/profile';
 import { getProfileDataForm } from '../model/selectors/getProfileDataForm/getProfileDataForm';
 import { getProfileIsLoading } from '../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
@@ -21,6 +19,7 @@ import { Country } from 'entities/Country/model/types/countrySelect';
 import { Currency } from 'entities/Currency';
 import {Text, TextTheme} from 'shared/ui/Text/Text'
 import { EditableProfilePageHeader } from 'features/EditableProfilePageHeader/EditableProfilePageHeader';
+import { ValidateProfileData } from '../model/const/ValidateProfileData';
 
 interface EditableProfileCardProps {
    className?: string;

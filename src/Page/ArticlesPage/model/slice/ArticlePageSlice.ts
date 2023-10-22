@@ -5,12 +5,11 @@ import {
     PayloadAction,
   } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Article, ArticlesView } from 'entities/Article';
+import { Article, ArticleSortField, ArticleType, ArticlesView } from 'entities/Article';
 import { fetchArticles } from '../service/fetchArticles/fetchArticles';
 import { LOCAL_STORAGE_ARTICLES_VIEW } from 'shared/const/const';
 import { ArticlePageSchema } from '../types/articlePageSchema';
-import { ArticleSortField, ArticleType} from 'entities/Article/model/types/article';
-import { TabsItem } from 'shared/ui/Tabs/Tabs';
+
 
 
   

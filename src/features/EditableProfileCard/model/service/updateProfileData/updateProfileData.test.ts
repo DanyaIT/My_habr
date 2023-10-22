@@ -2,7 +2,7 @@ import { Country } from "entities/Country/model/types/countrySelect"
 import { Currency } from "entities/Currency"
 import { TestAsyncThunk } from "shared/lib/TestAsuncThunk/TestAsuncThunk"
 import { updateProfileData } from "./updateProfileData"
-import { ValidateProfileData } from "../../types/profile"
+import { ValidateProfileData } from "../../const/ValidateProfileData"
 
 const profileData = {
     first: "Danya",
